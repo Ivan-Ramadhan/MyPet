@@ -38,7 +38,7 @@
             app:srcCompat="@drawable/capacity7" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/buttonMakananKering"
             android:layout_width="205dp"
             android:layout_height="79dp"
             android:background="@null"
@@ -250,7 +250,7 @@
             app:srcCompat="@drawable/nounsearch1221179" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/buttonKucing"
             android:layout_width="205dp"
             android:layout_height="79dp"
             android:background="@null"
