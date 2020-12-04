@@ -2,7 +2,6 @@ package com.example.myapplication1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_pilih_jenis_hewan.*
 
 class PilihJenisHewan : AppCompatActivity() {
@@ -12,7 +11,7 @@ class PilihJenisHewan : AppCompatActivity() {
 
         txtJudul.text = intent.getStringExtra("makanan")
 
-        buttonKucing.setOnClickListener{
+        buttonAnjing.setOnClickListener{
 
             val pindah = Intent(this@PilihJenisHewan, PilihJenisMakanan::class.java)
                 .apply {

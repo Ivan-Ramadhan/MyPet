@@ -29,6 +29,18 @@ class MainActivity : AppCompatActivity() {
             startActivity(pindah)
 
         }
+        buttonGrooming.setOnClickListener{
+
+            val pindah = Intent(this@MainActivity, GrJenisHewan::class.java)
+                .apply {
+
+                }
+
+            startActivity(pindah)
+
+            startActivity(pindah)
+
+        }
 
         var button3 = findViewById<Button>(R.id.button3)
         button3.setOnClickListener(View.OnClickListener {

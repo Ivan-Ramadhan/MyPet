@@ -257,7 +257,7 @@
             app:srcCompat="@drawable/nounsearch1221179" />
 
         <Button
-            android:id="@+id/buttonKucing"
+            android:id="@+id/buttonAnjing"
             android:layout_width="205dp"
             android:layout_height="79dp"
             android:background="@null"
