@@ -1,6 +1,7 @@
 package com.example.myapplication1
 
 import android.os.Bundle
+import android.os.Handler
 import android.text.TextUtils
 import android.view.WindowManager
 import com.google.android.gms.tasks.OnCompleteListener
@@ -149,9 +150,14 @@ class RegisterActivity : BaseActivity() {
                              * Here the new user registered is automatically signed-in so we just sign-out the user from firebase
                              * and send him to Login Screen.
                              */
-                            FirebaseAuth.getInstance().signOut()
-                            // Finish the Register Screen
-                            finish()
+                            Handler().postDelayed(
+                                {
+                                    FirebaseAuth.getInstance().signOut()
+                                    // Finish the Register Screen
+                                    finish()
+
+                                }, 1000)
+
                         } else {
                             // If the registering is not successful then show error message.
                             showErrorSnackBar(task.exception!!.message.toString(), true)
