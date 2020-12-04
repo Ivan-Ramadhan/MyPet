@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(pindah)
 
-            startActivity(pindah)
 
         }
 

@@ -10,7 +10,7 @@ class GrJenisHewan : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gr_jenis_hewan2)
 
-        buttonPelayanan.setOnClickListener {
+        buttonKucing.setOnClickListener {
 
             val pindah = Intent(this@GrJenisHewan, GrDaftarPelayanan::class.java)
                 .apply {
