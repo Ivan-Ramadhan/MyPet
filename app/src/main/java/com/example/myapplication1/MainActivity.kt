@@ -27,6 +27,18 @@ class MainActivity : AppCompatActivity() {
             startActivity(pindah)
 
         }
+        buttonGrooming.setOnClickListener{
+
+            val pindah = Intent(this@MainActivity, GrJenisHewan::class.java)
+                .apply {
+
+                }
+
+            startActivity(pindah)
+
+            startActivity(pindah)
+
+        }
 
         }
 
