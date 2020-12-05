@@ -28,8 +28,7 @@
             android:layout_gravity="center"
             android:contentDescription="@string/app_name"
             android:scaleType="fitCenter"
-            android:src="@drawable/logomypet"
-            app:tint="@color/colorWhite" />
+            android:src="@drawable/logomypet" />
     </FrameLayout>
 
     <TextView
