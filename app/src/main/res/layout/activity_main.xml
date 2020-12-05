@@ -83,7 +83,7 @@
             app:layout_constraintHorizontal_bias="0.934"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView23"
-            app:layout_constraintVertical_bias="0.13"
+            app:layout_constraintVertical_bias="0.219"
             app:srcCompat="@drawable/q2" />
 
         <ImageView
