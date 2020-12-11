@@ -3,8 +3,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import android.view.WindowManager
+import com.example.myapplication1.firestore.FirestoreClass
+import com.example.myapplication1.models.User
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -94,27 +97,44 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
             FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
 
-                    // Hide the progress dialog
-                    hideProgressDialog()
+
 
                     if (task.isSuccessful) {
 
                         showErrorSnackBar("You are logged in successfully.", false)
+                        FirestoreClass().getUserDetails(this@LoginActivity)
 
-                        Handler().postDelayed(
-                            {
-                                // Launch Main Activity
-                                startActivity(Intent(this@LoginActivity, MainActivity::class.java))
-                                finish()
-
-                            }, 1000)
 
 
                     } else {
+                        hideProgressDialog()
                         showErrorSnackBar(task.exception!!.message.toString(), true)
                     }
                 }
         }
     }
 
+    /**
+     * A function to notify user that logged in success and get the user details from the FireStore database after authentication.
+     */
+    fun userLoggedInSuccess(user: User) {
+
+        // Hide the progress dialog.
+        hideProgressDialog()
+
+        // Print the user details in the log as of now.
+        Log.i("First Name: ", user.firstName)
+        Log.i("Last Name: ", user.lastName)
+        Log.i("Email: ", user.email)
+
+        // Redirect the user to Main Screen after log in.
+        Handler().postDelayed(
+            {
+                // Launch Main Activity
+                startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                finish()
+
+            }, 1000)
+
+    }
 }
