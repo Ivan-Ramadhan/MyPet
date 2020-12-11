@@ -8,6 +8,7 @@ import android.view.View
 import android.view.WindowManager
 import com.example.myapplication1.firestore.FirestoreClass
 import com.example.myapplication1.models.User
+import com.example.myapplication1.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -132,7 +133,9 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
             Handler().postDelayed(
                 {
                     // Launch Main Activity
-                    startActivity(Intent(this@LoginActivity, UserProfileActivity::class.java))
+                    intent = Intent(this@LoginActivity, UserProfileActivity::class.java)
+                    intent.putExtra(Constants.EXTRA_USER_DETAILS, user)
+                    startActivity(intent)
                     finish()
                 }, 1000)
         } else {
