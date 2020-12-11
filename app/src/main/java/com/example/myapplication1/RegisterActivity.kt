@@ -1,9 +1,11 @@
 package com.example.myapplication1
 
 import android.os.Bundle
-import android.os.Handler
 import android.text.TextUtils
 import android.view.WindowManager
+import android.widget.Toast
+import com.example.myapplication1.firestore.FirestoreClass
+import com.example.myapplication1.models.User
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
@@ -132,8 +134,6 @@ class RegisterActivity : BaseActivity() {
                 .addOnCompleteListener(
                     OnCompleteListener<AuthResult> { task ->
 
-                        // Hide the progress dialog
-                        hideProgressDialog()
 
                         // If the registration is successfully done
                         if (task.isSuccessful) {
@@ -141,28 +141,50 @@ class RegisterActivity : BaseActivity() {
                             // Firebase registered user
                             val firebaseUser: FirebaseUser = task.result!!.user!!
 
-                            showErrorSnackBar(
-                                "You are registered successfully. Your user id is ${firebaseUser.uid}",
-                                false
+                            val user = User(
+                                firebaseUser.uid,
+                                et_first_name.text.toString().trim { it <= ' '},
+                                et_last_name.text.toString().trim { it <= ' '},
+                                et_email.text.toString().trim { it <= ' '}
                             )
+
+                            FirestoreClass().registerUser(this@RegisterActivity, user)
+//                            showErrorSnackBar(
+//                                "You are registered successfully. Your user id is ${firebaseUser.uid}",
+//                                false
+//                            )
 
                             /**
                              * Here the new user registered is automatically signed-in so we just sign-out the user from firebase
                              * and send him to Login Screen.
                              */
-                            Handler().postDelayed(
-                                {
-                                    FirebaseAuth.getInstance().signOut()
-                                    // Finish the Register Screen
-                                    finish()
+//                            Handler().postDelayed(
+//                                {
+//                                    FirebaseAuth.getInstance().signOut()
+//                                    // Finish the Register Screen
+//                                    finish()
+//
+//                                }, 1000)
 
-                                }, 1000)
+
 
                         } else {
+                            hideProgressDialog()
                             // If the registering is not successful then show error message.
                             showErrorSnackBar(task.exception!!.message.toString(), true)
                         }
                     })
         }
+    }
+
+    fun userRegistrationSuccess(){
+
+        hideProgressDialog()
+        Toast.makeText(
+            this@RegisterActivity,
+            resources.getString(R.string.register_success),
+            Toast.LENGTH_SHORT
+        ).show()
+
     }
 }
