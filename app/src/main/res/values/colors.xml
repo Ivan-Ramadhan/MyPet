@@ -2,8 +2,9 @@
 <resources>
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorAccent">#8A17D1</color>
 
+<!--    <color name="colorAccent">#03DAC5</color>-->
     <color name="colorWhite">#FFFFFF</color>
 
     <color name="colorPurpleDark">#5117AC</color>
@@ -18,4 +19,7 @@
 
     <color name="colorSnackBarSuccess">#8BC34A</color>
     <color name="colorSnackBarError">#F72400</color>
+
+    <color name="colorLightGrey">#F1F1F1</color>
+
 </resources>

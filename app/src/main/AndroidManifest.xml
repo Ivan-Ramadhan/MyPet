@@ -9,8 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ForgotPasswordActivity" android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".RegisterActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".UserProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SplashActivity"
             android:label="@string/app_name"
@@ -22,10 +29,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MasukkanKeranjang" android:theme="@style/AppTheme.HideActionBar"/>
-        <activity android:name=".PilihBarang" android:theme="@style/AppTheme.HideActionBar"/>
-        <activity android:name=".PilihJenisMakanan" android:theme="@style/AppTheme.HideActionBar"/>
-        <activity android:name=".PilihJenisHewan" android:theme="@style/AppTheme.HideActionBar"/>
+        <activity
+            android:name=".MasukkanKeranjang"
+            android:theme="@style/AppTheme.HideActionBar" />
+        <activity
+            android:name=".PilihBarang"
+            android:theme="@style/AppTheme.HideActionBar" />
+        <activity
+            android:name=".PilihJenisMakanan"
+            android:theme="@style/AppTheme.HideActionBar" />
+        <activity
+            android:name=".PilihJenisHewan"
+            android:theme="@style/AppTheme.HideActionBar" />
         <activity android:name=".GrDaftarPelayanan" />
         <activity android:name=".GrJenisHewan" />
         <activity android:name=".GrKeranjang" />
@@ -33,8 +48,12 @@
         <activity android:name=".AksesorisJenisHewan" />
         <activity android:name=".Aksesoriskeranjang" />
         <activity android:name=".AksesorisListBarang" />
-        <activity android:name=".MainActivity" android:theme="@style/AppTheme.HideActionBar"/>
-        <activity android:name=".LoginActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.HideActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="preloaded_fonts"

@@ -1,15 +1,14 @@
 
 package com.example.myapplication1
-import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import com.example.myapplication1.utils.Constants
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -17,6 +16,19 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        // TODO Step 4: Get the stored username from the Android SharedPreferences.
+        // START
+        // Create an instance of Android SharedPreferences
+        val sharedPreferences =
+            getSharedPreferences(Constants.MYPET_PREFERENCES, Context.MODE_PRIVATE)
+
+        val username = sharedPreferences.getString(Constants.LOGGED_IN_USERNAME, "")!!
+        // Set the result to the tv_main.
+        tv_Usermain.text= "Hello $username."
+        // END
+
 
         buttonMenuMakanan.setOnClickListener{
             var tagMakanan = "Pilih Jenis Hewan"

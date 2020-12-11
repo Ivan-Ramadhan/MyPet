@@ -127,14 +127,25 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
         Log.i("Last Name: ", user.lastName)
         Log.i("Email: ", user.email)
 
-        // Redirect the user to Main Screen after log in.
-        Handler().postDelayed(
-            {
-                // Launch Main Activity
-                startActivity(Intent(this@LoginActivity, MainActivity::class.java))
-                finish()
+        if (user.profileCompleted == 0) {
+            // If the user profile is incomplete then launch the UserProfileActivity.
+            Handler().postDelayed(
+                {
+                    // Launch Main Activity
+                    startActivity(Intent(this@LoginActivity, UserProfileActivity::class.java))
+                    finish()
+                }, 1000)
+        } else {
+            // Redirect the user to Main Screen after log in.
+            Handler().postDelayed(
+                {
+                    // Launch Main Activity
+                    startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                    finish()
+                }, 1000)
+        }
 
-            }, 1000)
+
 
     }
 }
