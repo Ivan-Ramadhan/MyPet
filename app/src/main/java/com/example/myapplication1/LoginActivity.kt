@@ -3,7 +3,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.text.TextUtils
-import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import com.example.myapplication1.firestore.FirestoreClass
@@ -122,11 +121,6 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
 
         // Hide the progress dialog.
         hideProgressDialog()
-
-        // Print the user details in the log as of now.
-        Log.i("First Name: ", user.firstName)
-        Log.i("Last Name: ", user.lastName)
-        Log.i("Email: ", user.email)
 
         if (user.profileCompleted == 0) {
             // If the user profile is incomplete then launch the UserProfileActivity.
