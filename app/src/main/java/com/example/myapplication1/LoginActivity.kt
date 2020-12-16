@@ -137,7 +137,7 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
             Handler().postDelayed(
                 {
                     // Launch Main Activity
-                    startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                    startActivity(Intent(this@LoginActivity, DashboardActivity::class.java))
                     finish()
                 }, 1000)
         }
