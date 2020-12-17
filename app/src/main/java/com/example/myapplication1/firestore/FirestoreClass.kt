@@ -5,10 +5,11 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.net.Uri
 import android.util.Log
+import com.example.myapplication1.models.User
 import com.example.myapplication1.ui.activities.LoginActivity
 import com.example.myapplication1.ui.activities.RegisterActivity
+import com.example.myapplication1.ui.activities.SettingsActivity
 import com.example.myapplication1.ui.activities.UserProfileActivity
-import com.example.myapplication1.models.User
 import com.example.myapplication1.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -95,12 +96,20 @@ class FirestoreClass {
                         // Call a function of base activity for transferring the result to it.
                         activity.userLoggedInSuccess(user)
                     }
+                    is SettingsActivity ->{
+
+                        activity.userDetailsSuccess(user)
+
+                    }
                 }
             }
             .addOnFailureListener { e ->
                 // Hide the progress dialog if there is any error. And print the error in log.
                 when (activity) {
                     is LoginActivity -> {
+                        activity.hideProgressDialog()
+                    }
+                    is SettingsActivity -> {
                         activity.hideProgressDialog()
                     }
                 }
