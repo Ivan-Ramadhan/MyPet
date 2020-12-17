@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import com.example.myapplication1.R
 
 
-class DashboardFragment : Fragment() {
+class OrdersFragment : Fragment() {
 
 
 
@@ -18,12 +18,12 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-  //      dashboardViewModel =
-  //          ViewModelProviders.of(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
+   //     notificationsViewModel =
+  //          ViewModelProviders.of(this).get(NotificationsViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_orders, container, false)
+        val textView: TextView = root.findViewById(R.id.text_notifications)
 
-        textView.text = "This is dashboard Fragment"
+        textView.text = "This is notifications Fragment"
 
         return root
     }

@@ -1,6 +1,7 @@
 package com.example.myapplication1.ui.activities
 
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -12,7 +13,15 @@ class HomeActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dashboard)
+        setContentView(R.layout.activity_home)
+
+        supportActionBar!!.setBackgroundDrawable(
+            ContextCompat.getDrawable(
+                this@HomeActivity,
+                R.drawable.app_gradient_color_background
+            )
+        )
+
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         val navController = findNavController(R.id.nav_host_fragment)
@@ -21,8 +30,8 @@ class HomeActivity : BaseActivity() {
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_home,
-                R.id.navigation_dashboard,
-                R.id.navigation_notifications
+                R.id.navigation_products,
+                R.id.navigation_orders
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
