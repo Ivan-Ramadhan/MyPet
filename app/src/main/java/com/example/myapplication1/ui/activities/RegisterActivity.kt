@@ -1,9 +1,10 @@
-package com.example.myapplication1
+package com.example.myapplication1.ui.activities
 
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.WindowManager
 import android.widget.Toast
+import com.example.myapplication1.R
 import com.example.myapplication1.firestore.FirestoreClass
 import com.example.myapplication1.models.User
 import com.google.android.gms.tasks.OnCompleteListener

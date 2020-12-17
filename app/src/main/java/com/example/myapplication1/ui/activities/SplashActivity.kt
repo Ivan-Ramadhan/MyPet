@@ -1,12 +1,11 @@
-package com.example.myapplication1
+package com.example.myapplication1.ui.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
-import android.graphics.Typeface
-import java.lang.reflect.Type
+import com.example.myapplication1.R
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

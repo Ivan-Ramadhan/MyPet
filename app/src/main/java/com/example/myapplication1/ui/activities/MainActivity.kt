@@ -1,5 +1,5 @@
 
-package com.example.myapplication1
+package com.example.myapplication1.ui.activities
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.myapplication1.R
 import com.example.myapplication1.utils.Constants
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -55,7 +56,8 @@ class MainActivity : AppCompatActivity() {
 
         var button3 = findViewById<Button>(R.id.button3)
         button3.setOnClickListener(View.OnClickListener {
-            var intent = Intent(this,AksesorisJenisHewan::class.java)
+            var intent = Intent(this,
+                AksesorisJenisHewan::class.java)
             startActivity(intent);
         })
 

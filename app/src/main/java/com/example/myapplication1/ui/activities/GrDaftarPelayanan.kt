@@ -1,11 +1,10 @@
-package com.example.myapplication1
+package com.example.myapplication1.ui.activities
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.myapplication1.R
 import kotlinx.android.synthetic.main.activity_gr_daftar_pelayanan.*
-import kotlinx.android.synthetic.main.activity_gr_jenis_hewan2.*
-import kotlinx.android.synthetic.main.activity_gr_keranjang.*
 
 
 class GrDaftarPelayanan : AppCompatActivity() {

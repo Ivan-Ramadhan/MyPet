@@ -5,9 +5,9 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.net.Uri
 import android.util.Log
-import com.example.myapplication1.LoginActivity
-import com.example.myapplication1.RegisterActivity
-import com.example.myapplication1.UserProfileActivity
+import com.example.myapplication1.ui.activities.LoginActivity
+import com.example.myapplication1.ui.activities.RegisterActivity
+import com.example.myapplication1.ui.activities.UserProfileActivity
 import com.example.myapplication1.models.User
 import com.example.myapplication1.utils.Constants
 import com.google.firebase.auth.FirebaseAuth

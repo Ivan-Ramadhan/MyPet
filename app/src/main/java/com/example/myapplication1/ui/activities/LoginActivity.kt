@@ -1,10 +1,11 @@
-package com.example.myapplication1
+package com.example.myapplication1.ui.activities
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.text.TextUtils
 import android.view.View
 import android.view.WindowManager
+import com.example.myapplication1.R
 import com.example.myapplication1.firestore.FirestoreClass
 import com.example.myapplication1.models.User
 import com.example.myapplication1.utils.Constants
@@ -137,7 +138,7 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
             Handler().postDelayed(
                 {
                     // Launch Main Activity
-                    startActivity(Intent(this@LoginActivity, DashboardActivity::class.java))
+                    startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
                     finish()
                 }, 1000)
         }

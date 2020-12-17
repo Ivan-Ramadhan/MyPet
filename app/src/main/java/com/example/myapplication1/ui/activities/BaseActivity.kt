@@ -1,8 +1,11 @@
-package com.example.myapplication1
+package com.example.myapplication1.ui.activities
 
 import android.app.Dialog
+import android.os.Handler
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.myapplication1.R
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.dialog_progress.*
 
@@ -13,15 +16,11 @@ import kotlinx.android.synthetic.main.dialog_progress.*
  */
 open class BaseActivity : AppCompatActivity() {
 
+    private var doubleBackToExitPressedOnce = false
 
-    /**
-     * This is a progress dialog instance which we will initialize later on.
-     */
     private lateinit var mProgressDialog: Dialog
 
-    /**
-     * A function to show the success and error messages in snack bar component.
-     */
+
     fun showErrorSnackBar(message: String, errorMessage: Boolean) {
         val snackBar =
             Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_LONG)
@@ -69,5 +68,24 @@ open class BaseActivity : AppCompatActivity() {
      */
     fun hideProgressDialog() {
         mProgressDialog.dismiss()
+    }
+
+    fun doubleBackToExit() {
+
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed()
+            return
+        }
+
+        this.doubleBackToExitPressedOnce = true
+
+        Toast.makeText(
+            this,
+            resources.getString(R.string.please_click_back_again_to_exit),
+            Toast.LENGTH_SHORT
+        ).show()
+
+        @Suppress("DEPRECATION")
+        Handler().postDelayed({ doubleBackToExitPressedOnce = false }, 2000)
     }
 }

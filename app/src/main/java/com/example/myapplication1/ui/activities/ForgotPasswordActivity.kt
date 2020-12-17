@@ -1,7 +1,8 @@
-package com.example.myapplication1
+package com.example.myapplication1.ui.activities
 
 import android.os.Bundle
 import android.widget.Toast
+import com.example.myapplication1.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_forgot_password.*
 
