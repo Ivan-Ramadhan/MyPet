@@ -19,9 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        // TODO Step 4: Get the stored username from the Android SharedPreferences.
-        // START
-        // Create an instance of Android SharedPreferences
+
         val sharedPreferences =
             getSharedPreferences(Constants.MYPET_PREFERENCES, Context.MODE_PRIVATE)
 
@@ -54,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        var button3 = findViewById<Button>(R.id.button3)
+        var button3 = findViewById<Button>(R.id.buttonAksesoris)
         button3.setOnClickListener(View.OnClickListener {
             var intent = Intent(this,
                 AksesorisJenisHewan::class.java)
