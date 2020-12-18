@@ -6,16 +6,14 @@ import android.content.SharedPreferences
 import android.net.Uri
 import android.util.Log
 import com.example.myapplication1.models.User
-import com.example.myapplication1.ui.activities.LoginActivity
-import com.example.myapplication1.ui.activities.RegisterActivity
-import com.example.myapplication1.ui.activities.SettingsActivity
-import com.example.myapplication1.ui.activities.UserProfileActivity
+import com.example.myapplication1.ui.activities.*
 import com.example.myapplication1.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import com.myshoppal.models.Product
 
 class FirestoreClass {
 
@@ -74,8 +72,7 @@ class FirestoreClass {
                 // Here we have received the document snapshot which is converted into the User Data model object.
                 val user = document.toObject(User::class.java)!!
 
-                // TODO Step 2: Create an instance of the Android SharedPreferences.
-                // START
+
                 val sharedPreferences =
                     activity.getSharedPreferences(
                         Constants.MYPET_PREFERENCES,
@@ -158,11 +155,11 @@ class FirestoreClass {
     }
 
 
-    fun uploadImageToCloudStorage(activity: Activity, imageFileURI: Uri?) {
+    fun uploadImageToCloudStorage(activity: Activity, imageFileURI: Uri?, imageType: String) {
 
         //getting the storage reference
         val sRef: StorageReference = FirebaseStorage.getInstance().reference.child(
-            Constants.USER_PROFILE_IMAGE + System.currentTimeMillis() + "."
+            imageType + System.currentTimeMillis() + "."
                     + Constants.getFileExtension(
                 activity,
                 imageFileURI
@@ -183,11 +180,12 @@ class FirestoreClass {
                     .addOnSuccessListener { uri ->
                         Log.e("Downloadable Image URL", uri.toString())
 
-                        // TODO Step 8: Pass the success result to base class.
-                        // START
-                        // Here call a function of base activity for transferring the result to it.
+
                         when (activity) {
                             is UserProfileActivity -> {
+                                activity.imageUploadSuccess(uri.toString())
+                            }
+                            is AddProductActivity -> {
                                 activity.imageUploadSuccess(uri.toString())
                             }
                         }
@@ -201,12 +199,38 @@ class FirestoreClass {
                     is UserProfileActivity -> {
                         activity.hideProgressDialog()
                     }
+                    is AddProductActivity -> {
+                        activity.hideProgressDialog()
+                    }
                 }
 
                 Log.e(
                     activity.javaClass.simpleName,
                     exception.message,
                     exception
+                )
+            }
+    }
+
+    fun uploadProductDetails(activity: AddProductActivity, productInfo: Product) {
+
+        mFireStore.collection(Constants.PRODUCTS)
+            .document()
+            // Here the userInfo are Field and the SetOption is set to merge. It is for if we wants to merge
+            .set(productInfo, SetOptions.merge())
+            .addOnSuccessListener {
+
+                // Here call a function of base activity for transferring the result to it.
+                activity.productUploadSuccess()
+            }
+            .addOnFailureListener { e ->
+
+                activity.hideProgressDialog()
+
+                Log.e(
+                    activity.javaClass.simpleName,
+                    "Error while uploading the product details.",
+                    e
                 )
             }
     }

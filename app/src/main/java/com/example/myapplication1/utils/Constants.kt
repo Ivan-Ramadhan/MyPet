@@ -9,8 +9,9 @@ import android.webkit.MimeTypeMap
 object Constants {
 
     // Firebase Constants
-    // This  is used for the collection name for USERS.
+    // Name of Collection in firstore
     const val USERS: String = "users"
+    const val PRODUCTS: String = "products"
 
     const val MYPET_PREFERENCES: String = "MyPetPrefs"
     const val LOGGED_IN_USERNAME: String = "logged_in_username"
@@ -34,6 +35,9 @@ object Constants {
     const val COMPLETE_PROFILE: String = "profileCompleted"
 
     const val USER_PROFILE_IMAGE: String = "User_Profile_Image"
+
+    const val PRODUCT_IMAGE: String = "Product_Image"
+
 
 
     fun showImageChooser(activity: Activity) {
