@@ -13,19 +13,6 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="35dp">
 
-        <Button
-            android:id="@+id/buttonMakananKering"
-            android:layout_width="111dp"
-            android:layout_height="142dp"
-            android:background="@null"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.203"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.483"
-            tools:visibility="invisible" />
-
         <ImageView
             android:id="@+id/imageView23"
             android:layout_width="423dp"
@@ -149,6 +136,18 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.815"
             app:srcCompat="@drawable/x2" />
+
+        <Button
+            android:id="@+id/buttonItemMakanan1"
+            android:layout_width="141dp"
+            android:layout_height="181dp"
+            android:background="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.49" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
