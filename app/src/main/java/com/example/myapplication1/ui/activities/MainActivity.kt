@@ -59,6 +59,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent);
         })
 
+        var button19 = findViewById<Button>(R.id.buttonAksesoris)
+        button19.setOnClickListener(View.OnClickListener {
+            var intent = Intent(this,
+                Health_JenisHewan::class.java)
+            startActivity(intent);
+        })
+
         }
 
 

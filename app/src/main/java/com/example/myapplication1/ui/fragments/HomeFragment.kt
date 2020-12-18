@@ -8,10 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.myapplication1.R
-import com.example.myapplication1.ui.activities.AksesorisJenisHewan
-import com.example.myapplication1.ui.activities.GrJenisHewan
-import com.example.myapplication1.ui.activities.PilihJenisHewan
-import com.example.myapplication1.ui.activities.SettingsActivity
+import com.example.myapplication1.ui.activities.*
 import com.example.myapplication1.utils.Constants
 
 
@@ -36,10 +33,12 @@ class HomeFragment : Fragment(), View.OnClickListener {
         val btnMakanan: Button? = root.findViewById(R.id.buttonMenuMakanan)
         val btnAksesoris: Button? = root.findViewById(R.id.buttonAksesoris)
         val btnGrooming: Button? = root.findViewById(R.id.buttonGrooming)
+        val btnHealth: Button? = root.findViewById(R.id.buttonhealth)
 //        textView.text = "This is home Fragment"
         btnMakanan?.setOnClickListener(this)
         btnAksesoris?.setOnClickListener(this)
         btnGrooming?.setOnClickListener(this)
+        btnHealth?.setOnClickListener(this)
         val tv_Usermain : TextView = root.findViewById(R.id.tv_Usermain)
 
         val sharedPreferences =
@@ -96,6 +95,11 @@ class HomeFragment : Fragment(), View.OnClickListener {
                 R.id.buttonGrooming -> {
 
                     val intent = Intent(activity, GrJenisHewan::class.java)
+                    activity?.startActivity(intent)
+                }
+                R.id.buttonhealth -> {
+
+                    val intent = Intent(activity, Health_JenisHewan::class.java)
                     activity?.startActivity(intent)
                 }
             }
