@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment
 import com.example.myapplication1.R
 import com.example.myapplication1.ui.activities.*
 import com.example.myapplication1.utils.Constants
+import kotlinx.android.synthetic.main.activity_gr_pilih_toko.*
+import kotlinx.android.synthetic.main.fragment_home.*
 
 
 class HomeFragment : Fragment(), View.OnClickListener {
@@ -33,11 +35,13 @@ class HomeFragment : Fragment(), View.OnClickListener {
         val btnMakanan: Button? = root.findViewById(R.id.buttonMenuMakanan)
         val btnAksesoris: Button? = root.findViewById(R.id.buttonAksesoris)
         val btnGrooming: Button? = root.findViewById(R.id.buttonGrooming)
+        val btnPenitipan: Button? = root.findViewById(R.id.buttonPenitipan)
         val btnHealth: Button? = root.findViewById(R.id.buttonhealth)
 //        textView.text = "This is home Fragment"
         btnMakanan?.setOnClickListener(this)
         btnAksesoris?.setOnClickListener(this)
         btnGrooming?.setOnClickListener(this)
+        btnPenitipan?.setOnClickListener(this)
         btnHealth?.setOnClickListener(this)
         val tv_Usermain : TextView = root.findViewById(R.id.tv_Usermain)
 
@@ -94,7 +98,13 @@ class HomeFragment : Fragment(), View.OnClickListener {
                 }
                 R.id.buttonGrooming -> {
 
-                    val intent = Intent(activity, GrJenisHewan::class.java)
+                    val intent = Intent(activity, GrPilihToko::class.java)
+                    activity?.startActivity(intent)
+                }
+
+                R.id.buttonPenitipan -> {
+
+                    val intent = Intent(activity, PenitipanPilihToko::class.java)
                     activity?.startActivity(intent)
                 }
                 R.id.buttonhealth -> {
