@@ -20,8 +20,6 @@
         <activity android:name=".ui.activities.Health_ProfilDokter1" />
         <activity android:name=".ui.activities.Health_ListDokter" />
         <activity android:name=".ui.activities.Health_JenisHewan" />
-        <activity
-            android:name=".ui.activities.SettingsActivity"
         <activity android:name=".ui.activities.AddProductActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />

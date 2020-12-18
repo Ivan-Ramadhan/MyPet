@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.myapplication1.R
-import kotlinx.android.synthetic.main.activity_health__bayar1.*
+import kotlinx.android.synthetic.main.activity_health__bayar3.*
 
 class Health_Bayar3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
