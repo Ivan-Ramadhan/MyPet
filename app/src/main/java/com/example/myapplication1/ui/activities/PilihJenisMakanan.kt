@@ -19,7 +19,16 @@ class PilihJenisMakanan : AppCompatActivity() {
                 }
 
             startActivity(pindah)
-
     }
+
+        buttonMakananBasah.setOnClickListener{
+
+            val pindah = Intent(this@PilihJenisMakanan, CatWetFoodActivity::class.java)
+                .apply {
+
+                }
+
+            startActivity(pindah)
+        }
 }
 }

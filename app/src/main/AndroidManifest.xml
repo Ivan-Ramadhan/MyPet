@@ -11,56 +11,63 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activities.PenitipanKeranjang"></activity>
+        <activity android:name=".ui.activities.CatWetFoodActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity android:name=".ui.activities.PenitipanKeranjang" />
         <activity android:name=".ui.activities.GrPilihToko" />
         <activity android:name=".ui.activities.PenitipanDurasi" />
         <activity android:name=".ui.activities.PenitipanJenisHewan" />
         <activity android:name=".ui.activities.PenitipanPilihToko" />
+        <activity android:name=".ui.activities.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
         <activity
-            android:name=".ui.activities.SettingsActivity"/>
-        <activity android:name=".ui.activities.Health_Konsultasi"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            ></activity>
-        <activity android:name=".ui.activities.Health_Bayar3"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
-        <activity android:name=".ui.activities.Health_Bayar2"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
-        <activity android:name=".ui.activities.Health_Bayar1"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
-        <activity android:name=".ui.activities.Health_ProfilDokter3"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
-        <activity android:name=".ui.activities.Health_ProfilDokter2"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
-        <activity android:name=".ui.activities.Health_ProfilDokter1"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
-        <activity android:name=".ui.activities.Health_ListDokter"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
-        <activity android:name=".ui.activities.Health_JenisHewan"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
-        <activity android:name=".ui.activities.AddProductActivity"
+            android:name=".ui.activities.Health_Konsultasi"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
+        <activity
+            android:name=".ui.activities.Health_Bayar3"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activities.Health_Bayar2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activities.Health_Bayar1"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activities.Health_ProfilDokter3"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activities.Health_ProfilDokter2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activities.Health_ProfilDokter1"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activities.Health_ListDokter"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activities.Health_JenisHewan"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activities.AddProductActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.activities.HomeActivity"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"
+          />
         <activity
             android:name=".ui.activities.UserProfileActivity"
             android:theme="@style/AppTheme.NoActionBar" />
