@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PilihJenisHewan">
+    tools:context=".ui.activities.Health_ListDokter">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             app:srcCompat="@drawable/grouphewan" />
 
         <EditText
-            android:id="@+id/editTextTextMultiLine3"
+            android:id="@+id/eTTMFirdi"
             android:layout_width="152dp"
             android:layout_height="36dp"
             android:ems="10"
@@ -42,7 +42,7 @@
             app:layout_constraintTop_toBottomOf="@+id/button8" />
 
         <EditText
-            android:id="@+id/editTextTextMultiLine4"
+            android:id="@+id/eTTMIvan"
             android:layout_width="152dp"
             android:layout_height="36dp"
             android:ems="10"
@@ -132,12 +132,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine3" />
+            app:layout_constraintTop_toBottomOf="@+id/eTTMFirdi" />
 
         <EditText
-            android:id="@+id/editTextTextMultiLine"
+            android:id="@+id/eTTMMigent"
             android:layout_width="152dp"
             android:layout_height="36dp"
+            android:duplicateParentState="true"
+            android:editable="true"
             android:ems="10"
             android:gravity="center"
             android:inputType="textMultiLine"
@@ -148,7 +150,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.204"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button8" />
+            app:layout_constraintTop_toBottomOf="@+id/button8"
+            tools:ignore="Deprecated" />
 
 
 
@@ -160,7 +163,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine3" />
+            app:layout_constraintTop_toBottomOf="@+id/eTTMFirdi" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
