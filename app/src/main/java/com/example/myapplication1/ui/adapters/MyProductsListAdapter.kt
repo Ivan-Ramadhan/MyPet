@@ -1,11 +1,13 @@
 package com.example.myapplication1.ui.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication1.R
+import com.example.myapplication1.ui.activities.ProductDetailsActivity
 import com.example.myapplication1.ui.fragments.ProductsFragment
 import com.example.myapplication1.utils.Formatter
 import com.example.myapplication1.utils.GlideLoader
@@ -52,7 +54,12 @@ open class MyProductsListAdapter(
                 fragment.deleteProduct(model.product_id)
 
             }
-            // END
+
+            holder.itemView.setOnClickListener{
+                val intent = Intent(context, ProductDetailsActivity::class.java)
+                context.startActivity(intent)
+            }
+
         }
     }
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view)
