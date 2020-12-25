@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication1.R
+import com.example.myapplication1.utils.Formatter
 import com.example.myapplication1.utils.GlideLoader
 import com.myshoppal.models.Product
 import kotlinx.android.synthetic.main.item_dashboard_layout.view.*
@@ -53,7 +54,8 @@ open class DashboardItemsListAdapter(
                 holder.itemView.iv_dashboard_item_image
             )
             holder.itemView.tv_dashboard_item_title.text = model.title
-            holder.itemView.tv_dashboard_item_price.text = "Rp ${model.price}"
+            val formattedprice = Formatter().rupiahFormatter(model.price)
+            holder.itemView.tv_dashboard_item_price.text = "${formattedprice}"
         }
     }
 

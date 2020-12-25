@@ -7,9 +7,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication1.R
 import com.example.myapplication1.ui.fragments.ProductsFragment
+import com.example.myapplication1.utils.Formatter
 import com.example.myapplication1.utils.GlideLoader
 import com.myshoppal.models.Product
 import kotlinx.android.synthetic.main.item_list_layout.view.*
+import java.util.*
 
 open class MyProductsListAdapter(
    private val context: Context,
@@ -39,7 +41,9 @@ open class MyProductsListAdapter(
             GlideLoader(context).loadProductPicture(model.image, holder.itemView.iv_item_image)
 
             holder.itemView.tv_item_name.text = model.title
-            holder.itemView.tv_item_price.text = "Rp ${model.price}"
+
+            val formattedprice = Formatter().rupiahFormatter(model.price)
+            holder.itemView.tv_item_price.text = "${formattedprice}"
 
 
             holder.itemView.ib_delete_product.setOnClickListener {
@@ -51,8 +55,6 @@ open class MyProductsListAdapter(
             // END
         }
     }
-
-
-
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view)
+
 }
