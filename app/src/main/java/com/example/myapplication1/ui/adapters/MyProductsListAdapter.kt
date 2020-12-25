@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication1.R
 import com.example.myapplication1.ui.activities.ProductDetailsActivity
 import com.example.myapplication1.ui.fragments.ProductsFragment
+import com.example.myapplication1.utils.Constants
 import com.example.myapplication1.utils.Formatter
 import com.example.myapplication1.utils.GlideLoader
 import com.myshoppal.models.Product
@@ -57,6 +58,7 @@ open class MyProductsListAdapter(
 
             holder.itemView.setOnClickListener{
                 val intent = Intent(context, ProductDetailsActivity::class.java)
+                intent.putExtra(Constants.EXTRA_PRODUCT_ID, model.product_id)
                 context.startActivity(intent)
             }
 
