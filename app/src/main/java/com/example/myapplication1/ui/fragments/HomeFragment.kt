@@ -10,8 +10,6 @@ import androidx.fragment.app.Fragment
 import com.example.myapplication1.R
 import com.example.myapplication1.ui.activities.*
 import com.example.myapplication1.utils.Constants
-import kotlinx.android.synthetic.main.activity_gr_pilih_toko.*
-import kotlinx.android.synthetic.main.fragment_home.*
 
 
 class HomeFragment : Fragment(), View.OnClickListener {
@@ -50,7 +48,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
         val username = sharedPreferences?.getString(Constants.LOGGED_IN_USERNAME, "")
         // Set the result to the tv_main.
-        tv_Usermain.text= "Hello $username."
+        tv_Usermain.text= "Hello $username"
 
 
 

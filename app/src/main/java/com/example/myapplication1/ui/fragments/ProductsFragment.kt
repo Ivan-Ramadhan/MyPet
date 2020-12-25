@@ -3,6 +3,8 @@ package com.example.myapplication1.ui.fragments
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication1.R
 import com.example.myapplication1.firestore.FirestoreClass
@@ -56,6 +58,57 @@ class ProductsFragment : BaseFragment() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+
+    fun deleteProduct(productID: String){
+        showAlertDialogToDeleteProduct(productID)
+    }
+
+    fun productDeleteSuccess(){
+        hideProgressDialog()
+
+        Toast.makeText(
+            requireActivity(),
+            resources.getString(R.string.product_delete_success_message),
+            Toast.LENGTH_SHORT
+        ).show()
+
+        getProductListFromFireStore()
+
+    }
+
+    private fun showAlertDialogToDeleteProduct(productID: String) {
+
+        val builder = AlertDialog.Builder(requireActivity())
+        //set title for alert dialog
+        builder.setTitle(resources.getString(R.string.delete_dialog_title))
+        //set message for alert dialog
+        builder.setMessage(resources.getString(R.string.delete_dialog_message))
+        builder.setIcon(android.R.drawable.ic_dialog_alert)
+
+        //performing positive action
+        builder.setPositiveButton(resources.getString(R.string.yes)) { dialogInterface, _ ->
+
+            showProgressDialog(resources.getString(R.string.please_wait))
+
+            FirestoreClass().deleteProduct(this@ProductsFragment, productID)
+
+            dialogInterface.dismiss()
+        }
+
+        //performing negative action
+        builder.setNegativeButton(resources.getString(R.string.no)) { dialogInterface, _ ->
+
+            dialogInterface.dismiss()
+        }
+        // Create the AlertDialog
+        val alertDialog: AlertDialog = builder.create()
+        // Set other dialog properties
+        alertDialog.setCancelable(false)
+        alertDialog.show()
+    }
+
+
 
     fun successProductsListFromFireStore(productsList: ArrayList<Product>) {
 

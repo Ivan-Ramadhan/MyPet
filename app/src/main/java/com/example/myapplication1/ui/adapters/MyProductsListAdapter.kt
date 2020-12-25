@@ -45,7 +45,7 @@ open class MyProductsListAdapter(
             holder.itemView.ib_delete_product.setOnClickListener {
 
 
-              //  fragment.deleteProduct(model.product_id)
+                fragment.deleteProduct(model.product_id)
 
             }
             // END
