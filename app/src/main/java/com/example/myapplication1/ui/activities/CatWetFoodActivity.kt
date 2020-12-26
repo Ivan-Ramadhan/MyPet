@@ -71,8 +71,9 @@ class CatWetFoodActivity : BaseActivity() {
 
                     val intent = Intent(this@CatWetFoodActivity, ProductDetailsActivity::class.java)
                     intent.putExtra(Constants.EXTRA_PRODUCT_ID, product.product_id)
+                    intent.putExtra(Constants.EXTRA_PRODUCT_OWNER_ID, product.user_id)
                     startActivity(intent)
-                    // END
+
                 }
             })
 
