@@ -67,12 +67,15 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
             R.id.action_settings -> {
 
-
                 startActivity(Intent(activity, SettingsActivity::class.java))
 
                 return true
             }
 
+            R.id.action_cart -> {
+                startActivity(Intent(activity, CartListActivity::class.java))
+                return true
+            }
         }
         return super.onOptionsItemSelected(item)
     }
@@ -89,6 +92,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
                      }
                     activity?.startActivity(intent)
                 }
+
                 R.id.buttonAksesoris -> {
 
                     val intent = Intent(activity, AksesorisJenisHewan::class.java)

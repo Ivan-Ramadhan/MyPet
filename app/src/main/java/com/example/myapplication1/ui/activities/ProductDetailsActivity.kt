@@ -1,5 +1,6 @@
 package com.example.myapplication1.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -36,6 +37,8 @@ class ProductDetailsActivity : BaseActivity(), View.OnClickListener {
 
         if(FirestoreClass().getCurrentUserID() == productOwnerId){
             btn_add_to_cart.visibility = View.GONE
+            btn_go_to_cart.visibility = View.GONE
+
         }else  {
             btn_add_to_cart.visibility = View.VISIBLE
         }
@@ -43,6 +46,7 @@ class ProductDetailsActivity : BaseActivity(), View.OnClickListener {
         getProductDetails()
 
         btn_add_to_cart.setOnClickListener(this)
+        btn_go_to_cart.setOnClickListener(this)
 
     }
 
@@ -70,8 +74,6 @@ class ProductDetailsActivity : BaseActivity(), View.OnClickListener {
     fun productDetailsSuccess(product: Product) {
         mProductDetails = product
 
-        hideProgressDialog()
-
         GlideLoader(this@ProductDetailsActivity).loadProductPicture(
             product.image,
             iv_product_detail_image
@@ -83,6 +85,12 @@ class ProductDetailsActivity : BaseActivity(), View.OnClickListener {
         tv_product_details_price.text = "${formattedprice}"
         tv_product_details_description.text = product.description
         tv_product_details_available_quantity.text = product.stock_quantity
+
+        if (FirestoreClass().getCurrentUserID() == product.user_id) {
+            hideProgressDialog()
+        } else {
+            FirestoreClass().checkIfItemExistInCart(this@ProductDetailsActivity, mProductId)
+        }
     }
 
     private fun addToCart(){
@@ -110,14 +118,27 @@ class ProductDetailsActivity : BaseActivity(), View.OnClickListener {
             resources.getString(R.string.success_message_item_added_to_cart),
             Toast.LENGTH_SHORT
         ).show()
+
+        btn_add_to_cart.visibility = View.GONE
+        btn_go_to_cart.visibility = View.VISIBLE
     }
 
+    fun productExistsInCart() {
+
+        hideProgressDialog()
+
+        btn_add_to_cart.visibility = View.GONE
+        btn_go_to_cart.visibility = View.VISIBLE
+    }
 
     override fun onClick(v: View?) {
         if(v != null){
             when(v.id){
                 R.id.btn_add_to_cart ->{
                     addToCart()
+                }
+                R.id.btn_go_to_cart->{
+                    startActivity(Intent(this@ProductDetailsActivity, CartListActivity::class.java))
                 }
             }
         }
