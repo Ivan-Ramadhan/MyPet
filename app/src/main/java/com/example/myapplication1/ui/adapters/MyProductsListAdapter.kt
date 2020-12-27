@@ -45,8 +45,8 @@ open class MyProductsListAdapter(
 
             holder.itemView.tv_item_name.text = model.title
 
-            val formattedprice = Formatter().rupiahFormatter(model.price)
-            holder.itemView.tv_item_price.text = "${formattedprice}"
+            val formattedPrice = Formatter().rupiahFormatter(model.price)
+            holder.itemView.tv_item_price.text = "${formattedPrice}"
 
 
             holder.itemView.ib_delete_product.setOnClickListener {
