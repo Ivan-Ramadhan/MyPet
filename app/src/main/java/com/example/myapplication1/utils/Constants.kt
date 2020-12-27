@@ -50,6 +50,9 @@ object Constants {
 
     const val PRODUCT_ID: String = "product_id"
 
+    const val CART_QUANTITY: String = "cart_quantity"
+
+
     fun showImageChooser(activity: Activity) {
         // An intent for launching the image selection of phone storage.
         val galleryIntent = Intent(
