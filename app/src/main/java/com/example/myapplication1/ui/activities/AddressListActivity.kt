@@ -3,6 +3,7 @@ package com.example.myapplication1.ui.activities
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -10,6 +11,7 @@ import com.example.myapplication1.R
 import com.example.myapplication1.firestore.FirestoreClass
 import com.example.myapplication1.models.Address
 import com.example.myapplication1.ui.adapters.AddressListAdapter
+import com.example.myapplication1.utils.SwipeToDeleteCallback
 import com.example.myapplication1.utils.SwipeToEditCallback
 import kotlinx.android.synthetic.main.activity_address_list.*
 
@@ -24,6 +26,8 @@ class AddressListActivity : BaseActivity() {
             val intent = Intent(this@AddressListActivity, AddEditAddressActivity::class.java)
             startActivity(intent)
         }
+
+        //getAddressList()
 
     }
 
@@ -82,11 +86,43 @@ class AddressListActivity : BaseActivity() {
             val editItemTouchHelper = ItemTouchHelper(editSwipeHandler)
             editItemTouchHelper.attachToRecyclerView(rv_address_list)
 
+            val deleteSwipeHandler = object : SwipeToDeleteCallback(this) {
+                override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+
+                    showProgressDialog(resources.getString(R.string.please_wait))
+
+                    FirestoreClass().deleteAddress(
+                        this@AddressListActivity,
+                        addressList[viewHolder.adapterPosition].id
+                    )
+
+                }
+            }
+            val deleteItemTouchHelper = ItemTouchHelper(deleteSwipeHandler)
+            deleteItemTouchHelper.attachToRecyclerView(rv_address_list)
+
         } else {
             rv_address_list.visibility = View.GONE
             tv_no_address_found.visibility = View.VISIBLE
         }
 
-
     }
+
+    fun deleteAddressSuccess() {
+
+        hideProgressDialog()
+
+        Toast.makeText(
+            this@AddressListActivity,
+            resources.getString(R.string.err_your_address_deleted_successfully),
+            Toast.LENGTH_SHORT
+        ).show()
+
+        // Refresh Activity
+        overridePendingTransition(0, 0)
+        finish()
+        startActivity(getIntent())
+        overridePendingTransition(0, 0)
+    }
+
 }
