@@ -1,5 +1,6 @@
 package com.example.myapplication1.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -8,6 +9,7 @@ import com.example.myapplication1.R
 import com.example.myapplication1.firestore.FirestoreClass
 import com.example.myapplication1.models.CartItem
 import com.example.myapplication1.ui.adapters.CartItemsListAdapter
+import com.example.myapplication1.utils.Constants
 import com.example.myapplication1.utils.Formatter
 import com.myshoppal.models.Product
 import kotlinx.android.synthetic.main.activity_cart_list.*
@@ -23,6 +25,12 @@ class CartListActivity : BaseActivity() {
         setContentView(R.layout.activity_cart_list)
 
         setupActionBar()
+
+        btn_checkout.setOnClickListener {
+            val intent = Intent(this@CartListActivity, AddressListActivity::class.java)
+            intent.putExtra(Constants.EXTRA_SELECT_ADDRESS, true)
+            startActivity(intent)
+        }
     }
 
     override fun onResume() {
