@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import android.net.Uri
 import android.util.Log
 import androidx.fragment.app.Fragment
+import com.example.myapplication1.models.Address
 import com.example.myapplication1.models.CartItem
 import com.example.myapplication1.models.User
 import com.example.myapplication1.ui.activities.*
@@ -525,6 +526,29 @@ class FirestoreClass {
                 Log.e(
                     context.javaClass.simpleName,
                     "Error while updating the cart item.",
+                    e
+                )
+            }
+    }
+
+
+    fun addAddress(activity: AddEditAddressActivity, addressInfo: Address) {
+
+
+        mFireStore.collection(Constants.ADDRESSES)
+            .document()
+
+            .set(addressInfo, SetOptions.merge())
+            .addOnSuccessListener {
+
+                activity.addUpdateAddressSuccess()
+
+            }
+            .addOnFailureListener { e ->
+                activity.hideProgressDialog()
+                Log.e(
+                    activity.javaClass.simpleName,
+                    "Error while adding the address.",
                     e
                 )
             }
