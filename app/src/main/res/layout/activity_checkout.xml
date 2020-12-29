@@ -33,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbar_checkout_activity"
         android:fillViewport="true"
+        android:layout_above="@id/ll_checkout_place_order"
         android:scrollbars="none">
 
         <RelativeLayout
@@ -158,6 +159,7 @@
                 android:textSize="@dimen/checkout_lbl_textSize" />
 
             <LinearLayout
+                android:id="@+id/ll_receipt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_items_receipt"

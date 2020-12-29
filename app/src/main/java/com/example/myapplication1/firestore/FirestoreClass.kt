@@ -8,6 +8,7 @@ import android.util.Log
 import androidx.fragment.app.Fragment
 import com.example.myapplication1.models.Address
 import com.example.myapplication1.models.CartItem
+import com.example.myapplication1.models.Order
 import com.example.myapplication1.models.User
 import com.example.myapplication1.ui.activities.*
 import com.example.myapplication1.ui.fragments.ProductsFragment
@@ -647,5 +648,28 @@ class FirestoreClass {
                 )
             }
     }
+
+    fun placeOrder(activity: CheckoutActivity, order: Order) {
+
+        mFireStore.collection(Constants.ORDERS)
+            .document()
+
+            .set(order, SetOptions.merge())
+            .addOnSuccessListener {
+
+                activity.orderPlacedSuccess()
+
+            }
+            .addOnFailureListener { e ->
+
+                activity.hideProgressDialog()
+                Log.e(
+                    activity.javaClass.simpleName,
+                    "Error while placing an order.",
+                    e
+                )
+            }
+    }
+
 
 }

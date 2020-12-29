@@ -1,12 +1,15 @@
 package com.example.myapplication1.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication1.R
 import com.example.myapplication1.firestore.FirestoreClass
 import com.example.myapplication1.models.Address
 import com.example.myapplication1.models.CartItem
+import com.example.myapplication1.models.Order
 import com.example.myapplication1.ui.adapters.CartItemsListAdapter
 import com.example.myapplication1.utils.Constants
 import com.myshoppal.models.Product
@@ -19,6 +22,11 @@ class CheckoutActivity : BaseActivity() {
     private lateinit var mProductsList: ArrayList<Product>
 
     private lateinit var mCartItemsList: ArrayList<CartItem>
+
+    private var mSubTotal: Double = 0.0
+
+    private var mTotalAmount: Double = 0.0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +49,10 @@ class CheckoutActivity : BaseActivity() {
                 tv_checkout_other_details.text = mAddressDetails?.otherDetails
             }
             tv_checkout_mobile_number.text = mAddressDetails?.mobileNumber
+        }
+
+        btn_place_order.setOnClickListener {
+            placeAnOrder()
         }
 
         getProductList()
@@ -101,8 +113,6 @@ class CheckoutActivity : BaseActivity() {
         val cartListAdapter = CartItemsListAdapter(this@CheckoutActivity, mCartItemsList, false)
         rv_cart_list_items.adapter = cartListAdapter
 
-        var subTotal: Double = 0.0
-
         for (item in mCartItemsList) {
 
             val availableQuantity = item.stock_quantity.toInt()
@@ -111,24 +121,56 @@ class CheckoutActivity : BaseActivity() {
                 val price = item.price.toDouble()
                 val quantity = item.cart_quantity.toInt()
 
-                subTotal += (price * quantity)
+                mSubTotal += (price * quantity)
             }
         }
 
-        tv_checkout_sub_total.text = "Rp$subTotal"
-        // Here we have kept Shipping Charge is fixed as $10 but in your case it may cary. Also, it depends on the location and total amount.
-        tv_checkout_shipping_charge.text = "RP1000.0"
+        tv_checkout_sub_total.text = "Rp$mSubTotal"
 
-        if (subTotal > 0) {
+        tv_checkout_shipping_charge.text = "Rp1000"
+
+        if (mSubTotal > 0) {
             ll_checkout_place_order.visibility = View.VISIBLE
 
-            val total = subTotal + 10
-            tv_checkout_total_amount.text = "Rp$total"
+            mTotalAmount = mSubTotal + 10.0
+            tv_checkout_total_amount.text = "Rp$mTotalAmount"
         } else {
             ll_checkout_place_order.visibility = View.GONE
         }
 
+    }
 
+
+    private fun placeAnOrder() {
+
+        showProgressDialog(resources.getString(R.string.please_wait))
+
+        val order = Order(
+            FirestoreClass().getCurrentUserID(),
+            mCartItemsList,
+            mAddressDetails!!,
+            "My order ${System.currentTimeMillis()}",
+            mCartItemsList[0].image,
+            mSubTotal.toString(),
+            "10.0",
+            mTotalAmount.toString()
+        )
+
+        FirestoreClass().placeOrder(this@CheckoutActivity, order)
+
+    }
+
+    fun orderPlacedSuccess() {
+
+        hideProgressDialog()
+
+        Toast.makeText(this@CheckoutActivity, "Your order placed successfully.", Toast.LENGTH_SHORT)
+            .show()
+
+        val intent = Intent(this@CheckoutActivity, HomeActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+        finish()
     }
 
 
