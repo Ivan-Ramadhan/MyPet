@@ -431,6 +431,10 @@ class FirestoreClass {
                     is CartListActivity -> {
                         activity.successCartItemsList(list)
                     }
+
+                    is CheckoutActivity -> {
+                        activity.successCartItemsList(list)
+                    }
                 }
 
             }
@@ -439,13 +443,16 @@ class FirestoreClass {
                     is CartListActivity -> {
                         activity.hideProgressDialog()
                     }
+                    is CheckoutActivity -> {
+                        activity.hideProgressDialog()
+                    }
                 }
 
                 Log.e(activity.javaClass.simpleName, "Error while getting the cart list items.", e)
             }
     }
 
-    fun getAllProductsList(activity: CartListActivity) {
+    fun getAllProductsList(activity: Activity) {
 
         mFireStore.collection(Constants.PRODUCTS)
             .get()
@@ -463,11 +470,27 @@ class FirestoreClass {
                     productsList.add(product)
                 }
 
-                activity.successProductsListFromFireStore(productsList)
+                when (activity) {
+                    is CartListActivity -> {
+                        activity.successProductsListFromFireStore(productsList)
+                    }
 
+                    is CheckoutActivity -> {
+                        activity.successProductsListFromFireStore(productsList)
+                    }
+
+                }
             }
             .addOnFailureListener { e ->
-                activity.hideProgressDialog()
+                when (activity) {
+                    is CartListActivity -> {
+                        activity.hideProgressDialog()
+                    }
+
+                    is CheckoutActivity -> {
+                        activity.hideProgressDialog()
+                    }
+                }
                 Log.e("Get Product List", "Error while getting all product list.", e)
             }
     }
