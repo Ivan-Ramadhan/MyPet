@@ -11,6 +11,8 @@ class PilihJenisMakanan : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pilih_jenis_makanan)
 
+        setupActionBar()
+
         buttonMakananKering.setOnClickListener{
 
             val pindah = Intent(this@PilihJenisMakanan, PilihBarang::class.java)
@@ -31,4 +33,15 @@ class PilihJenisMakanan : AppCompatActivity() {
             startActivity(pindah)
         }
 }
+    private fun setupActionBar() {
+
+        setSupportActionBar(toolbar_mknjnmkn_activity)
+
+        val actionBar = supportActionBar
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true)
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_white_color_back_24dp)
+        }
+        toolbar_mknjnmkn_activity.setNavigationOnClickListener { onBackPressed() }
+    }
 }
