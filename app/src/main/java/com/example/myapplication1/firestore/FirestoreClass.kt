@@ -6,10 +6,7 @@ import android.content.SharedPreferences
 import android.net.Uri
 import android.util.Log
 import androidx.fragment.app.Fragment
-import com.example.myapplication1.models.Address
-import com.example.myapplication1.models.CartItem
-import com.example.myapplication1.models.Order
-import com.example.myapplication1.models.User
+import com.example.myapplication1.models.*
 import com.example.myapplication1.ui.activities.*
 import com.example.myapplication1.ui.fragments.OrdersFragment
 import com.example.myapplication1.ui.fragments.ProductsFragment
@@ -672,27 +669,42 @@ class FirestoreClass {
             }
     }
 
-    fun updateAllDetails(activity: CheckoutActivity, cartList: ArrayList<CartItem>) {
+    fun updateAllDetails(activity: CheckoutActivity, cartList: ArrayList<CartItem>, order: Order) {
 
         val writeBatch = mFireStore.batch()
 
-        for (cart in cartList) {
+        for (cartItem in cartList) {
 
-            val productHashMap = HashMap<String, Any>()
+         //   val productHashMap = HashMap<String, Any>()
 
-            productHashMap[Constants.STOCK_QUANTITY] =
-                (cart.stock_quantity.toInt() - cart.cart_quantity.toInt()).toString()
+//            productHashMap[Constants.STOCK_QUANTITY] =
+//                (cart.stock_quantity.toInt() - cart.cart_quantity.toInt()).toString()
 
-            val documentReference = mFireStore.collection(Constants.PRODUCTS)
-                .document(cart.product_id)
+            val soldProduct = SoldProduct(
 
-            writeBatch.update(documentReference, productHashMap)
+                cartItem.product_owner_id,
+                cartItem.title,
+                cartItem.price,
+                cartItem.cart_quantity,
+                cartItem.image,
+                order.title,
+                order.order_datetime,
+                order.sub_total_amount,
+                order.shipping_charge,
+                order.total_amount,
+                order.address
+            )
+
+            val documentReference = mFireStore.collection(Constants.SOLD_PRODUCTS)
+                .document(cartItem.product_id)
+
+            writeBatch.set(documentReference, soldProduct)
         }
 
-        for (cart in cartList) {
+        for (cartItem in cartList) {
 
             val documentReference = mFireStore.collection(Constants.CART_ITEMS)
-                .document(cart.id)
+                .document(cartItem.id)
             writeBatch.delete(documentReference)
         }
 

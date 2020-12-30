@@ -31,7 +31,8 @@ class HomeActivity : BaseActivity() {
             setOf(
                 R.id.navigation_home,
                 R.id.navigation_products,
-                R.id.navigation_orders
+                R.id.navigation_orders,
+                R.id.navigation_sold_products
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
