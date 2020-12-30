@@ -10,6 +10,7 @@ import com.example.myapplication1.models.*
 import com.example.myapplication1.ui.activities.*
 import com.example.myapplication1.ui.fragments.OrdersFragment
 import com.example.myapplication1.ui.fragments.ProductsFragment
+import com.example.myapplication1.ui.fragments.SoldProductsFragment
 import com.example.myapplication1.utils.Constants
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -675,11 +676,6 @@ class FirestoreClass {
 
         for (cartItem in cartList) {
 
-         //   val productHashMap = HashMap<String, Any>()
-
-//            productHashMap[Constants.STOCK_QUANTITY] =
-//                (cart.stock_quantity.toInt() - cart.cart_quantity.toInt()).toString()
-
             val soldProduct = SoldProduct(
 
                 cartItem.product_owner_id,
@@ -695,10 +691,24 @@ class FirestoreClass {
                 order.address
             )
 
+
             val documentReference = mFireStore.collection(Constants.SOLD_PRODUCTS)
+                .document()
+            writeBatch.set(documentReference, soldProduct)
+
+        }
+
+        for (cartItem in cartList) {
+
+            val productHashMap = HashMap<String, Any>()
+
+            productHashMap[Constants.STOCK_QUANTITY] =
+                (cartItem.stock_quantity.toInt() - cartItem.cart_quantity.toInt()).toString()
+
+            val documentReference = mFireStore.collection(Constants.PRODUCTS)
                 .document(cartItem.product_id)
 
-            writeBatch.set(documentReference, soldProduct)
+            writeBatch.update(documentReference, productHashMap)
         }
 
         for (cartItem in cartList) {
@@ -748,5 +758,38 @@ class FirestoreClass {
             }
     }
 
+    fun getSoldProductsList(fragment: SoldProductsFragment) {
+
+        mFireStore.collection(Constants.SOLD_PRODUCTS)
+            .whereEqualTo(Constants.USER_ID, getCurrentUserID())
+            .get()
+            .addOnSuccessListener { document ->
+
+                Log.e(fragment.javaClass.simpleName, document.documents.toString())
+
+                val list: ArrayList<SoldProduct> = ArrayList()
+
+                for (i in document.documents) {
+
+                    val soldProduct = i.toObject(SoldProduct::class.java)!!
+                    soldProduct.id = i.id
+
+                    list.add(soldProduct)
+                }
+
+                fragment.successSoldProductsList(list)
+
+            }
+            .addOnFailureListener { e ->
+
+                fragment.hideProgressDialog()
+
+                Log.e(
+                    fragment.javaClass.simpleName,
+                    "Error while getting the list of sold products.",
+                    e
+                )
+            }
+    }
 
 }
