@@ -14,11 +14,23 @@ import kotlinx.android.synthetic.main.activity_cat_wet_food.*
 
 class CatWetFoodActivity : BaseActivity() {
 //    private val context: Context = this.activi
+    private var mProductCategory : String = ""
+    lateinit var product: Product
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cat_wet_food)
-
+        tv_title.text = intent.getStringExtra(Constants.PRODUCT_CATEGORY)
+        mProductCategory = intent.getStringExtra(Constants.PRODUCT_CATEGORY).toString()
         setupActionBar()
+
+        product = Product(
+            category = intent.getStringExtra(Constants.PRODUCT_CATEGORY).toString(),
+            animal = intent.getStringExtra(Constants.ANIMAL).toString(),
+            type = intent.getStringExtra(Constants.PRODUCT_TYPE).toString()
+
+        )
+
+
     }
     private fun setupActionBar() {
 
@@ -42,7 +54,7 @@ class CatWetFoodActivity : BaseActivity() {
         // Show the progress dialog.
         showProgressDialog(resources.getString(R.string.please_wait))
 
-        FirestoreClass().getCatwetfoodItemsList(this@CatWetFoodActivity)
+        FirestoreClass().getCatwetfoodItemsList(this@CatWetFoodActivity,product)
     }
 
 

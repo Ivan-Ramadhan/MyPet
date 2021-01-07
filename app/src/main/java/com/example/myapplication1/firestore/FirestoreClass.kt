@@ -277,9 +277,14 @@ class FirestoreClass {
             }
     }
 
-    fun getCatwetfoodItemsList(activity: CatWetFoodActivity) {
+    fun getCatwetfoodItemsList(activity: CatWetFoodActivity, product: Product) {
         // The collection name for PRODUCTS
+
         mFireStore.collection(Constants.PRODUCTS)
+            .whereEqualTo(Constants.PRODUCT_TYPE,product.type)
+            .whereEqualTo(Constants.ANIMAL,product.animal)
+            .whereEqualTo(Constants.PRODUCT_CATEGORY,product.category)
+
             .get() // Will get the documents snapshots.
             .addOnSuccessListener { document ->
 

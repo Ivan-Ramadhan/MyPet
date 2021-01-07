@@ -9,6 +9,9 @@ import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -25,6 +28,17 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
 
     private var mProductImageURL: String = ""
 
+    private var mProductType : String = ""
+
+    private var mProductCategory : String = ""
+
+    private var mProductAnimal: String = ""
+
+    lateinit var optionProductType : Spinner
+
+    lateinit var optionProductCategory : Spinner
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_product)
@@ -35,7 +49,101 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
 
         // Assign the click event to submit button.
         btn_submit.setOnClickListener(this)
+
+
     }
+
+    override fun onResume() {
+        super.onResume()
+
+        if(rb_cat.isChecked)
+        {
+            mProductAnimal = Constants.CAT
+            spinnerProductType()
+        }
+        else {
+            mProductAnimal = Constants.DOG
+            spinnerProductType()
+        }
+    }
+
+    private fun spinnerProductType(){
+        optionProductType = findViewById(R.id.sp_product_type) as Spinner
+        val listType = arrayOf("Choose Product Type...","Food","Accessories","Grooming")
+
+        optionProductType.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,listType)
+        optionProductType.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                showErrorSnackBar(
+                    resources.getString(R.string.err_msg_enter_product_type),
+                    true
+                )
+            }
+
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                var listCategory: Array<String> = arrayOf()
+
+               // FOOD
+                if(listType.get(position).equals("Food") && rb_cat.isChecked)
+                {
+                    listCategory = arrayOf("Choose Product Category...","Wet Cat Food","Dry Cat Food","Snack")
+                }
+
+                else if(listType.get(position).equals("Food") && rb_dog.isChecked)
+                {
+                    listCategory = arrayOf("Choose Product Category...","Wet Dog Food","Dry Dog Food","Snack")
+                }
+
+                // Accessories
+                else if(listType.get(position).equals("Accessories") && rb_cat.isChecked)
+                {
+                    listCategory = arrayOf("Choose Product Category...","Cat Glasses","Nackles","Leash")
+                }
+
+                else if(listType.get(position).equals("Accessories") && rb_dog.isChecked)
+                {
+                    listCategory = arrayOf("Choose Product Category...","Dog Glasses","Nackles","Leash")
+                }
+
+                // FOOD
+                else if(listType.get(position).equals("Grooming") && rb_cat.isChecked)
+                {
+                    listCategory = arrayOf("Choose Product Category...","Cat Hair Cut","nails cut","treatment")
+                }
+                else if(listType.get(position).equals("Grooming") && rb_dog.isChecked)
+                {
+                    listCategory = arrayOf("Choose Product Category...","Dog Hair Cut","nails cut","treatment")
+                }
+                mProductType = listType.get(position).trim { it <= ' ' }
+                spinnerProductCategory(listCategory)
+
+
+            }
+        }
+
+    }
+
+    private fun spinnerProductCategory(listCategory: Array<String>){
+        optionProductCategory = findViewById(R.id.sp_product_category) as Spinner
+
+        optionProductCategory.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,listCategory)
+        optionProductCategory.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                showErrorSnackBar(
+                    resources.getString(R.string.err_msg_enter_product_type),
+                    true
+                )
+            }
+
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                    mProductCategory = listCategory.get(position)
+
+            }
+        }
+
+
+    }
+
 
 
     private fun setupActionBar() {
@@ -216,7 +324,10 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
             et_product_price.text.toString().trim { it <= ' ' },
             et_product_description.text.toString().trim { it <= ' ' },
             et_product_quantity.text.toString().trim { it <= ' ' },
-            mProductImageURL
+            mProductImageURL,
+            mProductType,
+            mProductAnimal,
+            mProductCategory
         )
 
         FirestoreClass().uploadProductDetails(this@AddProductActivity, product)

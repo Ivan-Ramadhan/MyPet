@@ -195,4 +195,11 @@
 
     <string name="title_sold_product_details">SOLD PRODUCT DETAILS</string>
 
+    <string name="rb_lbl_cat">CAT</string>
+    <string name="rb_lbl_dog">DOG</string>
+    <string name="et_hint_product_category">Product Category</string>
+    <string name="et_hint_product_type">Product Type</string>
+    <string name="sp_hint_product_type">Product Type</string>
+    <string name="err_msg_enter_product_type">Please Choose Product Type</string>
+
 </resources>

@@ -3,6 +3,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication1.R
+import com.example.myapplication1.utils.Constants
 import kotlinx.android.synthetic.main.activity_pilih_jenis_hewan.*
 
 class PilihJenisHewan : AppCompatActivity() {
@@ -16,12 +17,23 @@ class PilihJenisHewan : AppCompatActivity() {
 
             val pindah = Intent(this@PilihJenisHewan, PilihJenisMakanan::class.java)
                 .apply {
-
+                    putExtra(Constants.ANIMAL,Constants.CAT)
+                    putExtra(Constants.PRODUCT_TYPE,intent.getStringExtra(Constants.PRODUCT_TYPE))
                 }
 
             startActivity(pindah)
     }
 
+        buttonMknAnjing.setOnClickListener{
+
+            val pindah = Intent(this@PilihJenisHewan, PilihJenisMakanan::class.java)
+                .apply {
+                    putExtra(Constants.ANIMAL,Constants.DOG)
+                    putExtra(Constants.PRODUCT_TYPE,intent.getStringExtra(Constants.PRODUCT_TYPE))
+                }
+
+            startActivity(pindah)
+        }
         setupActionBar()
 
 }

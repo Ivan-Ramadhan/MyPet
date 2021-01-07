@@ -96,6 +96,81 @@
                     android:textSize="@dimen/et_textSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
+
+            <RadioGroup
+                android:id="@+id/rg_animal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_radio_button_height"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/til_product_title">
+
+                <RadioButton
+                    android:id="@+id/rb_cat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/drawable_gender_tab_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="@string/rb_lbl_cat"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rb_dog"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/profile_radio_button_marginStartEnd"
+                    android:layout_weight="1"
+                    android:background="@drawable/drawable_gender_tab_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/rb_lbl_dog"
+                    android:textColor="@drawable/drawable_gender_tab_text_color_selector"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/sp_product_type"
+                android:background="@drawable/item_darkgrey_border_back"
+                style="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rg_animal"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:spinnerMode="dropdown"
+                android:prompt="@string/sp_hint_product_type">
+
+            </Spinner>
+
+            <Spinner
+                android:id="@+id/sp_product_category"
+                android:background="@drawable/item_darkgrey_border_back"
+                style="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sp_product_type"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:spinnerMode="dropdown"
+                android:prompt="@string/sp_hint_product_type">
+
+            </Spinner>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_product_price"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -108,7 +183,7 @@
                 android:textColorHint="@color/colorSecondaryText"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/til_product_title">
+                app:layout_constraintTop_toBottomOf="@id/sp_product_category">
 
                 <EditText
                     android:id="@+id/et_product_price"

@@ -76,6 +76,24 @@ object Constants {
 
     const val EXTRA_SOLD_PRODUCT_DETAILS: String = "extra_sold_product_details"
 
+    const val ANIMAL: String = "animal"
+
+    const val CAT: String = "cat"
+
+    const val DOG: String = "dog"
+
+    const val PRODUCT_TYPE: String = "type"
+
+    const val PRODUCT_CATEGORY: String = "category"
+
+    const val FOOD: String = "Food"
+
+    const val DRY_FOOD = "Dry Cat Food"
+
+    const val WET_FOOD = "Wet Cat Food"
+
+    const val SNACK = "Snack"
+
     fun showImageChooser(activity: Activity) {
         // An intent for launching the image selection of phone storage.
         val galleryIntent = Intent(

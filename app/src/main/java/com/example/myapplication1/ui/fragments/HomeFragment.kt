@@ -88,7 +88,8 @@ class HomeFragment : Fragment(), View.OnClickListener {
                     var tagMakanan = "Pilih Jenis Hewan"
                     val intent = Intent(activity, PilihJenisHewan::class.java)
                         .apply {
-                        putExtra("makanan",tagMakanan)
+                            putExtra("makanan",tagMakanan)
+                            putExtra(Constants.PRODUCT_TYPE,Constants.FOOD)
                      }
                     activity?.startActivity(intent)
                 }
