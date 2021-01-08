@@ -10,6 +10,26 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_acc_category"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/app_gradient_color_background">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingStart="@dimen/toolbar_title_paddingStart"
+                android:paddingEnd="0dp"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/toolbar_title_text_size"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
 
         <ImageView
             android:id="@+id/imageView"
@@ -32,7 +52,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_acc_category"
             app:srcCompat="@drawable/grouphewan" />
 
         <ImageView
@@ -45,7 +65,7 @@
             app:layout_constraintHorizontal_bias="0.171"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.566"
+            app:layout_constraintVertical_bias="0.604"
             app:srcCompat="@drawable/capacity7" />
 
         <ImageView
@@ -71,7 +91,7 @@
             app:layout_constraintHorizontal_bias="0.531"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.712"
+            app:layout_constraintVertical_bias="0.768"
             app:srcCompat="@drawable/capacity7" />
 
         <ImageView

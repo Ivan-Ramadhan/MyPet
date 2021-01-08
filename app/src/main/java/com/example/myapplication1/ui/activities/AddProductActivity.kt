@@ -86,18 +86,18 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
                // FOOD
                 if(listType.get(position).equals("Food") && rb_cat.isChecked)
                 {
-                    listCategory = arrayOf("Choose Product Category...","Wet Cat Food","Dry Cat Food","Snack")
+                    listCategory = arrayOf("Choose Product Category...","Wet Cat Food","Dry Cat Food","Cat Snack")
                 }
 
                 else if(listType.get(position).equals("Food") && rb_dog.isChecked)
                 {
-                    listCategory = arrayOf("Choose Product Category...","Wet Dog Food","Dry Dog Food","Snack")
+                    listCategory = arrayOf("Choose Product Category...","Wet Dog Food","Dry Dog Food","Dog Snack")
                 }
 
                 // Accessories
                 else if(listType.get(position).equals("Accessories") && rb_cat.isChecked)
                 {
-                    listCategory = arrayOf("Choose Product Category...","Cat Glasses","Nackles","Leash")
+                    listCategory = arrayOf("Choose Product Category...","Cat Shirt","Cat Neck Belt","Cat Hat","Cat Glasses","Cat Shoes")
                 }
 
                 else if(listType.get(position).equals("Accessories") && rb_dog.isChecked)
@@ -108,11 +108,11 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
                 // FOOD
                 else if(listType.get(position).equals("Grooming") && rb_cat.isChecked)
                 {
-                    listCategory = arrayOf("Choose Product Category...","Cat Hair Cut","nails cut","treatment")
+                    listCategory = arrayOf("Choose Product Category...","Cat Hair Cut","Cat Nails Cut","Cat Hair Treatment")
                 }
                 else if(listType.get(position).equals("Grooming") && rb_dog.isChecked)
                 {
-                    listCategory = arrayOf("Choose Product Category...","Dog Hair Cut","nails cut","treatment")
+                    listCategory = arrayOf("Choose Product Category...","Dog Hair Cut","Dog Nails Cut","Dog Hair Treatment")
                 }
                 mProductType = listType.get(position).trim { it <= ' ' }
                 spinnerProductCategory(listCategory)
