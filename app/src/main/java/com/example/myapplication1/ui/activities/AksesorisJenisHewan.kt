@@ -21,9 +21,10 @@ class AksesorisJenisHewan : AppCompatActivity() {
 
         button16.setOnClickListener(View.OnClickListener {
             var intent = Intent(this,
-                AksesorisJenisBarang::class.java)
+                AksesorisJenisBarangAnjing::class.java)
             startActivity(intent);
         })
+
     }
 
 

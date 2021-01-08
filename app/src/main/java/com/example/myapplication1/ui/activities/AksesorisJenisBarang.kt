@@ -18,6 +18,30 @@ class AksesorisJenisBarang : AppCompatActivity() {
             startActivity(intent);
         })
 
+        button9.setOnClickListener(View.OnClickListener {
+            var intent = Intent(this,
+                Aksesorisbajukucing::class.java)
+            startActivity(intent);
+        })
+
+        button22.setOnClickListener(View.OnClickListener {
+            var intent = Intent(this,
+                Aksesoriskalungkucing::class.java)
+            startActivity(intent);
+        })
+
+        button23.setOnClickListener(View.OnClickListener {
+            var intent = Intent(this,
+                Aksesoristopikucing::class.java)
+            startActivity(intent);
+        })
+
+        button25.setOnClickListener(View.OnClickListener {
+            var intent = Intent(this,
+                Aksesorissepatukucing::class.java)
+            startActivity(intent);
+        })
+
     }
 
 

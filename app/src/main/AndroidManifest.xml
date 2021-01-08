@@ -137,9 +137,19 @@
         <activity android:name=".ui.activities.GrJenisHewan" />
         <activity android:name=".ui.activities.GrKeranjang" />
         <activity android:name=".ui.activities.AksesorisJenisBarang" />
+        <activity android:name=".ui.activities.AksesorisJenisBarangAnjing" />
         <activity android:name=".ui.activities.AksesorisJenisHewan" />
         <activity android:name=".ui.activities.Aksesoriskeranjang" />
         <activity android:name=".ui.activities.AksesorisListBarang" />
+        <activity android:name=".ui.activities.Aksesorisbajuanjing" />
+        <activity android:name=".ui.activities.Aksesorisbajukucing" />
+        <activity android:name=".ui.activities.Aksesoriskacamataanjing" />
+        <activity android:name=".ui.activities.Aksesoriskalunganjing" />
+        <activity android:name=".ui.activities.Aksesoriskalungkucing" />
+        <activity android:name=".ui.activities.Aksesorissepatuanjing" />
+        <activity android:name=".ui.activities.Aksesorissepatukucing" />
+        <activity android:name=".ui.activities.Aksesoristopianjing" />
+        <activity android:name=".ui.activities.Aksesoristopikucing" />
         <activity
             android:name=".ui.activities.MainActivity"
             android:theme="@style/AppTheme.HideActionBar" />
