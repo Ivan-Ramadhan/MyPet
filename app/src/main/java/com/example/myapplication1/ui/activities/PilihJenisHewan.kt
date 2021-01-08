@@ -10,7 +10,7 @@ class PilihJenisHewan : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pilih_jenis_hewan)
-
+        setupActionBar()
         txtJudul.text = intent.getStringExtra("makanan")
 
         buttonMknKucing.setOnClickListener{
@@ -34,7 +34,7 @@ class PilihJenisHewan : AppCompatActivity() {
 
             startActivity(pindah)
         }
-        setupActionBar()
+
 
 }
 

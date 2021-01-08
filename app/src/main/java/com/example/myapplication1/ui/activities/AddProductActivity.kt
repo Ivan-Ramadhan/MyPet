@@ -61,7 +61,7 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
             mProductPet = Constants.CAT
             spinnerProductType()
         }
-        else {
+        else if(rb_dog.isChecked) {
             mProductPet = Constants.DOG
             spinnerProductType()
         }
@@ -86,12 +86,12 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
                // FOOD
                 if(listType.get(position).equals("Food") && rb_cat.isChecked)
                 {
-                    listCategory = arrayOf("Choose Product Category...","Wet Cat Food","Dry Cat Food","Cat Snack")
+                    listCategory = arrayOf("Choose Product Category...","Wet Cat Food","Dry Cat Food","Snack Cat Food")
                 }
 
                 else if(listType.get(position).equals("Food") && rb_dog.isChecked)
                 {
-                    listCategory = arrayOf("Choose Product Category...","Wet Dog Food","Dry Dog Food","Dog Snack")
+                    listCategory = arrayOf("Choose Product Category...","Wet Dog Food","Dry Dog Food","Snack Dog Food")
                 }
 
                 // Accessories
@@ -102,7 +102,7 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
 
                 else if(listType.get(position).equals("Accessories") && rb_dog.isChecked)
                 {
-                    listCategory = arrayOf("Choose Product Category...","Dog Clothes","Dog Neck Belt","Dog Hat","Cat Glasses","Dog Shoes")
+                    listCategory = arrayOf("Choose Product Category...","Dog Clothes","Dog Neck Belt","Dog Hat","Dog Glasses","Dog Shoes")
                 }
 
                 // FOOD
@@ -310,7 +310,15 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
     }
 
     private fun uploadProductDetails() {
+        if(rb_cat.isChecked)
+        {
+            mProductPet = Constants.CAT
 
+        }
+        else if(rb_dog.isChecked) {
+            mProductPet = Constants.DOG
+
+        }
         // Get the logged in username from the SharedPreferences that we have stored at a time of login.
         val username =
             this.getSharedPreferences(Constants.MYPET_PREFERENCES, Context.MODE_PRIVATE)

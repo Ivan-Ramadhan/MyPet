@@ -87,6 +87,11 @@ object Constants {
     const val PRODUCT_CATEGORY: String = "category"
 
     const val FOOD: String = "Food"
+    const val ACCESSORIES: String = "Accessories"
+    const val HEALTH_CARE: String = "Health Care"
+    const val DAY_CARE: String = "Day Care"
+    const val GROOMING: String = "Grooming"
+
 
     const val DRY_CAT_FOOD = "Dry Cat Food"
 
@@ -99,6 +104,18 @@ object Constants {
     const val WET_DOG_FOOD = "Wet Dog Food"
 
     const val SNACK_DOG_FOOD = "Snack Dog Food"
+
+    const val CAT_CLOTHES = "Cat Clothes"
+    const val CAT_NECKBELT = "Cat Neck Belt"
+    const val CAT_HAT = "Cat Hat"
+    const val CAT_GLASSES = "Cat Glasses"
+    const val CAT_SHOES = "Cat Shoes"
+
+    const val DOG_CLOTHES = "Dog Clothes"
+    const val DOG_NECKBELT = "Dog Neck Belt"
+    const val DOG_HAT = "Dog Hat"
+    const val DOG_GLASSES = "Dog Glasses"
+    const val DOG_SHOES = "Dog Shoes"
 
     fun showImageChooser(activity: Activity) {
         // An intent for launching the image selection of phone storage.

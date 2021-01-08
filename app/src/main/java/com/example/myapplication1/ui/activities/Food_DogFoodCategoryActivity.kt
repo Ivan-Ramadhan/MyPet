@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication1.R
 import com.example.myapplication1.utils.Constants
 import kotlinx.android.synthetic.main.activity_food__dog_food_category.*
-import kotlinx.android.synthetic.main.activity_pilih_jenis_makanan.*
 
 class Food_DogFoodCategoryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,13 +52,13 @@ class Food_DogFoodCategoryActivity : AppCompatActivity() {
 
     private fun setupActionBar() {
 
-        setSupportActionBar(toolbar_mknjnmkn_activity)
+        setSupportActionBar(toolbar_dogfoodcategory_activity)
 
         val actionBar = supportActionBar
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true)
             actionBar.setHomeAsUpIndicator(R.drawable.ic_white_color_back_24dp)
         }
-        toolbar_mknjnmkn_activity.setNavigationOnClickListener { onBackPressed() }
+        toolbar_dogfoodcategory_activity.setNavigationOnClickListener { onBackPressed() }
     }
 }

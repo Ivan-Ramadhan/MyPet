@@ -97,22 +97,35 @@ class HomeFragment : Fragment(), View.OnClickListener {
                 R.id.buttonAksesoris -> {
 
                     val intent = Intent(activity, AksesorisJenisHewan::class.java)
+                        .apply {
+                            putExtra(Constants.PRODUCT_TYPE,Constants.ACCESSORIES)
+                        }
                     activity?.startActivity(intent)
+
                 }
                 R.id.buttonGrooming -> {
 
                     val intent = Intent(activity, GrPilihToko::class.java)
+                        .apply {
+                            putExtra(Constants.PRODUCT_TYPE,Constants.GROOMING)
+                        }
                     activity?.startActivity(intent)
                 }
 
                 R.id.buttonPenitipan -> {
 
                     val intent = Intent(activity, PenitipanPilihToko::class.java)
+                        .apply {
+                            putExtra(Constants.PRODUCT_TYPE,Constants.DAY_CARE)
+                        }
                     activity?.startActivity(intent)
                 }
                 R.id.buttonhealth -> {
 
                     val intent = Intent(activity, Health_JenisHewan::class.java)
+                        .apply {
+                            putExtra(Constants.PRODUCT_TYPE,Constants.HEALTH_CARE)
+                        }
                     activity?.startActivity(intent)
                 }
             }
