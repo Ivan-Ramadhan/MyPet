@@ -16,11 +16,13 @@ class CatWetFoodActivity : BaseActivity() {
 //    private val context: Context = this.activi
     private var mProductCategory : String = ""
     lateinit var product: Product
+    private var mProductType : String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cat_wet_food)
         tv_title.text = intent.getStringExtra(Constants.PRODUCT_CATEGORY)
         mProductCategory = intent.getStringExtra(Constants.PRODUCT_CATEGORY).toString()
+        mProductType = intent.getStringExtra(Constants.PRODUCT_TYPE).toString()
         setupActionBar()
 
         product = Product(
@@ -71,7 +73,12 @@ class CatWetFoodActivity : BaseActivity() {
             rv_catwetfood_items.visibility = View.VISIBLE
             tv_no_catwetfood_items_found.visibility = View.GONE
 
-            rv_catwetfood_items.layoutManager = GridLayoutManager(this, 2)
+            if(mProductType.equals(Constants.GROOMING))
+            rv_catwetfood_items.layoutManager = GridLayoutManager(this, 1)
+            else{
+                rv_catwetfood_items.layoutManager = GridLayoutManager(this, 2)
+            }
+
             rv_catwetfood_items.setHasFixedSize(true)
 
             val adapter = DashboardItemsListAdapter(this, catwetfoodItemsList)

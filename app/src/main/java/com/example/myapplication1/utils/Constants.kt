@@ -93,29 +93,39 @@ object Constants {
     const val GROOMING: String = "Grooming"
 
 
-    const val DRY_CAT_FOOD = "Dry Cat Food"
+    const val DRY_CAT_FOOD: String = "Dry Cat Food"
 
-    const val WET_CAT_FOOD = "Wet Cat Food"
+    const val WET_CAT_FOOD: String = "Wet Cat Food"
 
-    const val SNACK_CAT_FOOD = "Snack Cat Food"
+    const val SNACK_CAT_FOOD: String = "Snack Cat Food"
 
-    const val DRY_DOG_FOOD = "Dry Dog Food"
+    const val DRY_DOG_FOOD: String = "Dry Dog Food"
 
-    const val WET_DOG_FOOD = "Wet Dog Food"
+    const val WET_DOG_FOOD: String = "Wet Dog Food"
 
-    const val SNACK_DOG_FOOD = "Snack Dog Food"
+    const val SNACK_DOG_FOOD: String = "Snack Dog Food"
 
-    const val CAT_CLOTHES = "Cat Clothes"
-    const val CAT_NECKBELT = "Cat Neck Belt"
-    const val CAT_HAT = "Cat Hat"
-    const val CAT_GLASSES = "Cat Glasses"
-    const val CAT_SHOES = "Cat Shoes"
+    const val CAT_CLOTHES: String = "Cat Clothes"
+    const val CAT_NECKBELT: String = "Cat Neck Belt"
+    const val CAT_HAT: String = "Cat Hat"
+    const val CAT_GLASSES: String = "Cat Glasses"
+    const val CAT_SHOES: String = "Cat Shoes"
 
-    const val DOG_CLOTHES = "Dog Clothes"
-    const val DOG_NECKBELT = "Dog Neck Belt"
-    const val DOG_HAT = "Dog Hat"
-    const val DOG_GLASSES = "Dog Glasses"
-    const val DOG_SHOES = "Dog Shoes"
+    const val DOG_CLOTHES: String = "Dog Clothes"
+    const val DOG_NECKBELT: String = "Dog Neck Belt"
+    const val DOG_HAT: String = "Dog Hat"
+    const val DOG_GLASSES: String = "Dog Glasses"
+    const val DOG_SHOES: String = "Dog Shoes"
+
+    const val CAT_HAIR_CUT: String = "Cat Hair Cut"
+    const val CAT_NAIL_CUT: String = "Cat Nail Cut"
+    const val CAT_HAIR_TREATMENT: String = "Cat Hair Treatment"
+
+    const val DOG_HAIR_CUT: String = "Dog Hair Cut"
+    const val DOG_NAIL_CUT: String = "Dog Nail Cut"
+    const val DOG_HAIR_TREATMENT: String = "Dog Hair Treatment"
+
+
 
     fun showImageChooser(activity: Activity) {
         // An intent for launching the image selection of phone storage.

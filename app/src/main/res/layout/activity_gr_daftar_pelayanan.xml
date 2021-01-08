@@ -120,7 +120,7 @@
             app:srcCompat="@drawable/whatsapp_image_2020_12_04_at_23_54_07__2_" />
 
         <Button
-            android:id="@+id/buttonCukur"
+            android:id="@+id/btn_gr_cat_haircut"
             android:layout_width="220dp"
             android:layout_height="108dp"
             android:background="@null"
@@ -133,7 +133,7 @@
             tools:visibility="invisible" />
 
         <Button
-            android:id="@+id/buttonPotongKuku"
+            android:id="@+id/btn_gr_cat_nailcut"
             android:layout_width="218dp"
             android:layout_height="114dp"
             android:background="@null"
@@ -146,7 +146,7 @@
             tools:visibility="invisible" />
 
         <Button
-            android:id="@+id/buttonPerawatan"
+            android:id="@+id/btn_gr_cat_hairtreatment"
             android:layout_width="228dp"
             android:layout_height="116dp"
             android:background="@null"

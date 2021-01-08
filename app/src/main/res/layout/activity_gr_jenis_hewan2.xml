@@ -121,7 +121,7 @@
             app:srcCompat="@drawable/cat" />
 
         <Button
-            android:id="@+id/buttonKucing"
+            android:id="@+id/btn_gr_cat"
             android:layout_width="207dp"
             android:layout_height="102dp"
             android:layout_marginStart="88dp"
@@ -134,7 +134,7 @@
             tools:visibility="invisible" />
 
         <Button
-            android:id="@+id/buttonAnjing"
+            android:id="@+id/btn_gr_dog"
             android:layout_width="205dp"
             android:layout_height="101dp"
             android:layout_marginStart="92dp"

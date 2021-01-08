@@ -105,7 +105,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
                 }
                 R.id.buttonGrooming -> {
 
-                    val intent = Intent(activity, GrPilihToko::class.java)
+                    val intent = Intent(activity, GrJenisHewan::class.java)
                         .apply {
                             putExtra(Constants.PRODUCT_TYPE,Constants.GROOMING)
                         }

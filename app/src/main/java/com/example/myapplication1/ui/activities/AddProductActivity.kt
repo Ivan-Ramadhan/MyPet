@@ -108,11 +108,11 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
                 // FOOD
                 else if(listType.get(position).equals("Grooming") && rb_cat.isChecked)
                 {
-                    listCategory = arrayOf("Choose Product Category...","Cat Hair Cut","Cat Nails Cut","Cat Hair Treatment")
+                    listCategory = arrayOf("Choose Product Category...","Cat Hair Cut","Cat Nail Cut","Cat Hair Treatment")
                 }
                 else if(listType.get(position).equals("Grooming") && rb_dog.isChecked)
                 {
-                    listCategory = arrayOf("Choose Product Category...","Dog Hair Cut","Dog Nails Cut","Dog Hair Treatment")
+                    listCategory = arrayOf("Choose Product Category...","Dog Hair Cut","Dog Nail Cut","Dog Hair Treatment")
                 }
                 mProductType = listType.get(position).trim { it <= ' ' }
                 spinnerProductCategory(listCategory)

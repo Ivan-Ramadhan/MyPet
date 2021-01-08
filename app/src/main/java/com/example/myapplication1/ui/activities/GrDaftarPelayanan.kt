@@ -2,10 +2,9 @@ package com.example.myapplication1.ui.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication1.R
-import kotlinx.android.synthetic.main.activity_aksesoris_jenis_barang.*
+import com.example.myapplication1.utils.Constants
 import kotlinx.android.synthetic.main.activity_gr_daftar_pelayanan.*
 
 
@@ -14,20 +13,41 @@ class GrDaftarPelayanan : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gr_daftar_pelayanan)
 
-        buttonCukur.setOnClickListener(View.OnClickListener {
-            var intent = Intent(this,
-                GrKeranjang::class.java)
-            startActivity(intent);
-        })
 
-        buttonCukur.setOnClickListener {
+        btn_gr_cat_haircut.setOnClickListener {
 
-            val pindah = Intent(this@GrDaftarPelayanan, GrKeranjang::class.java)
+            val intent = Intent(this@GrDaftarPelayanan, CatWetFoodActivity::class.java)
                 .apply {
-
+                    putExtra(Constants.PRODUCT_CATEGORY, Constants.CAT_HAIR_CUT)
+                    putExtra(Constants.PET,intent.getStringExtra(Constants.PET))
+                    putExtra(Constants.PRODUCT_TYPE,intent.getStringExtra(Constants.PRODUCT_TYPE))
                 }
 
-            startActivity(pindah)
+            startActivity(intent)
+        }
+
+        btn_gr_cat_nailcut.setOnClickListener {
+
+            val intent = Intent(this@GrDaftarPelayanan, CatWetFoodActivity::class.java)
+                .apply {
+                    putExtra(Constants.PRODUCT_CATEGORY, Constants.CAT_NAIL_CUT)
+                    putExtra(Constants.PET,intent.getStringExtra(Constants.PET))
+                    putExtra(Constants.PRODUCT_TYPE,intent.getStringExtra(Constants.PRODUCT_TYPE))
+                }
+
+            startActivity(intent)
+        }
+
+        btn_gr_cat_hairtreatment.setOnClickListener {
+
+            val intent = Intent(this@GrDaftarPelayanan, CatWetFoodActivity::class.java)
+                .apply {
+                    putExtra(Constants.PRODUCT_CATEGORY, Constants.CAT_HAIR_TREATMENT)
+                    putExtra(Constants.PET,intent.getStringExtra(Constants.PET))
+                    putExtra(Constants.PRODUCT_TYPE,intent.getStringExtra(Constants.PRODUCT_TYPE))
+                }
+
+            startActivity(intent)
         }
 
     }
