@@ -17,7 +17,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import com.myshoppal.models.Product
 
 class FirestoreClass {
 
@@ -282,7 +281,7 @@ class FirestoreClass {
 
         mFireStore.collection(Constants.PRODUCTS)
             .whereEqualTo(Constants.PRODUCT_TYPE,product.type)
-            .whereEqualTo(Constants.ANIMAL,product.animal)
+            .whereEqualTo(Constants.PET,product.pet)
             .whereEqualTo(Constants.PRODUCT_CATEGORY,product.category)
 
             .get() // Will get the documents snapshots.

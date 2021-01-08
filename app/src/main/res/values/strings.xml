@@ -201,5 +201,9 @@
     <string name="et_hint_product_type">Product Type</string>
     <string name="sp_hint_product_type">Product Type</string>
     <string name="err_msg_enter_product_type">Please Choose Product Type</string>
+    <string name="lbl_dog_food_category">Choose Dog Food Category</string>
+    <string name="lbl_dog_food_category_dryfood">Dry Food</string>
+    <string name="lbl_dog_food_category_wetfood">Wet Food</string>
+    <string name="lbl_dog_food_category_snackfood">Snack</string>
 
 </resources>

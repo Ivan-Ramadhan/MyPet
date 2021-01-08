@@ -7,12 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication1.R
+import com.example.myapplication1.models.Product
 import com.example.myapplication1.ui.activities.ProductDetailsActivity
 import com.example.myapplication1.ui.fragments.ProductsFragment
 import com.example.myapplication1.utils.Constants
 import com.example.myapplication1.utils.Formatter
 import com.example.myapplication1.utils.GlideLoader
-import com.myshoppal.models.Product
 import kotlinx.android.synthetic.main.item_list_layout.view.*
 import java.util.*
 

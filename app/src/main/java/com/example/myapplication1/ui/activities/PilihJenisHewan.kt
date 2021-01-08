@@ -17,7 +17,7 @@ class PilihJenisHewan : AppCompatActivity() {
 
             val pindah = Intent(this@PilihJenisHewan, PilihJenisMakanan::class.java)
                 .apply {
-                    putExtra(Constants.ANIMAL,Constants.CAT)
+                    putExtra(Constants.PET,Constants.CAT)
                     putExtra(Constants.PRODUCT_TYPE,intent.getStringExtra(Constants.PRODUCT_TYPE))
                 }
 
@@ -26,9 +26,9 @@ class PilihJenisHewan : AppCompatActivity() {
 
         buttonMknAnjing.setOnClickListener{
 
-            val pindah = Intent(this@PilihJenisHewan, PilihJenisMakanan::class.java)
+            val pindah = Intent(this@PilihJenisHewan, Food_DogFoodCategoryActivity::class.java)
                 .apply {
-                    putExtra(Constants.ANIMAL,Constants.DOG)
+                    putExtra(Constants.PET,Constants.DOG)
                     putExtra(Constants.PRODUCT_TYPE,intent.getStringExtra(Constants.PRODUCT_TYPE))
                 }
 

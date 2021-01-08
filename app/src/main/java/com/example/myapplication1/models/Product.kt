@@ -1,4 +1,4 @@
-package com.myshoppal.models
+package com.example.myapplication1.models
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
@@ -14,7 +14,7 @@ data class Product(
     val stock_quantity: String = "",
     val image: String = "",
     val type: String = "",
-    val animal: String = "",
+    val pet: String = "",
     val category: String = "",
     var product_id: String = ""
 ) : Parcelable

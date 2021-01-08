@@ -12,7 +12,7 @@ import com.example.myapplication1.models.CartItem
 import com.example.myapplication1.models.Order
 import com.example.myapplication1.ui.adapters.CartItemsListAdapter
 import com.example.myapplication1.utils.Constants
-import com.myshoppal.models.Product
+import com.example.myapplication1.models.Product
 import kotlinx.android.synthetic.main.activity_checkout.*
 
 class CheckoutActivity : BaseActivity() {

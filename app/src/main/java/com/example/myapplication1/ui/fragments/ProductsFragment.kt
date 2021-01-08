@@ -10,7 +10,7 @@ import com.example.myapplication1.R
 import com.example.myapplication1.firestore.FirestoreClass
 import com.example.myapplication1.ui.activities.AddProductActivity
 import com.example.myapplication1.ui.adapters.MyProductsListAdapter
-import com.myshoppal.models.Product
+import com.example.myapplication1.models.Product
 import kotlinx.android.synthetic.main.fragment_products.*
 
 

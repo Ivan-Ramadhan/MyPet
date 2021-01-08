@@ -17,9 +17,9 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.myapplication1.R
 import com.example.myapplication1.firestore.FirestoreClass
+import com.example.myapplication1.models.Product
 import com.example.myapplication1.utils.Constants
 import com.example.myapplication1.utils.GlideLoader
-import com.myshoppal.models.Product
 import kotlinx.android.synthetic.main.activity_add_product.*
 import java.io.IOException
 
@@ -32,7 +32,7 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
 
     private var mProductCategory : String = ""
 
-    private var mProductAnimal: String = ""
+    private var mProductPet: String = ""
 
     lateinit var optionProductType : Spinner
 
@@ -58,18 +58,18 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
 
         if(rb_cat.isChecked)
         {
-            mProductAnimal = Constants.CAT
+            mProductPet = Constants.CAT
             spinnerProductType()
         }
         else {
-            mProductAnimal = Constants.DOG
+            mProductPet = Constants.DOG
             spinnerProductType()
         }
     }
 
     private fun spinnerProductType(){
         optionProductType = findViewById(R.id.sp_product_type) as Spinner
-        val listType = arrayOf("Choose Product Type...","Food","Accessories","Grooming")
+        val listType = arrayOf("Choose Product Type...","Food","Accessories","Grooming","Health Care","Day Care")
 
         optionProductType.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,listType)
         optionProductType.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
@@ -326,7 +326,7 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
             et_product_quantity.text.toString().trim { it <= ' ' },
             mProductImageURL,
             mProductType,
-            mProductAnimal,
+            mProductPet,
             mProductCategory
         )
 

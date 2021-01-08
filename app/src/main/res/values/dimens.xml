@@ -179,4 +179,12 @@
     <dimen name="sold_details_items_receipt">16dp</dimen>
     <dimen name="sold_details_label_value_textSize">18sp</dimen>
 
+
+    <dimen name="title_padding">16dp</dimen>
+
+    <dimen name="iv_category_width">60dp</dimen>
+    <dimen name="iv_categoryheight">50dp</dimen>
+    <dimen name="category_textSize">24sp</dimen>
+    <dimen name="category_item_image_padding">1dp</dimen>
+
 </resources>

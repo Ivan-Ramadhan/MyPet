@@ -76,7 +76,7 @@ object Constants {
 
     const val EXTRA_SOLD_PRODUCT_DETAILS: String = "extra_sold_product_details"
 
-    const val ANIMAL: String = "animal"
+    const val PET: String = "pet"
 
     const val CAT: String = "cat"
 

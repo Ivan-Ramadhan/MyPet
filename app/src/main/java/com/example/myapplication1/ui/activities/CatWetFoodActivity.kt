@@ -7,9 +7,9 @@ import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.myapplication1.R
 import com.example.myapplication1.firestore.FirestoreClass
+import com.example.myapplication1.models.Product
 import com.example.myapplication1.ui.adapters.DashboardItemsListAdapter
 import com.example.myapplication1.utils.Constants
-import com.myshoppal.models.Product
 import kotlinx.android.synthetic.main.activity_cat_wet_food.*
 
 class CatWetFoodActivity : BaseActivity() {
@@ -25,7 +25,7 @@ class CatWetFoodActivity : BaseActivity() {
 
         product = Product(
             category = intent.getStringExtra(Constants.PRODUCT_CATEGORY).toString(),
-            animal = intent.getStringExtra(Constants.ANIMAL).toString(),
+            pet = intent.getStringExtra(Constants.PET).toString(),
             type = intent.getStringExtra(Constants.PRODUCT_TYPE).toString()
 
         )

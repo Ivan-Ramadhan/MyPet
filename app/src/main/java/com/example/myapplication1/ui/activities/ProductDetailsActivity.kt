@@ -8,10 +8,10 @@ import androidx.core.content.ContextCompat
 import com.example.myapplication1.R
 import com.example.myapplication1.firestore.FirestoreClass
 import com.example.myapplication1.models.CartItem
+import com.example.myapplication1.models.Product
 import com.example.myapplication1.utils.Constants
 import com.example.myapplication1.utils.Formatter
 import com.example.myapplication1.utils.GlideLoader
-import com.myshoppal.models.Product
 import kotlinx.android.synthetic.main.activity_product_details.*
 
 class ProductDetailsActivity : BaseActivity(), View.OnClickListener {

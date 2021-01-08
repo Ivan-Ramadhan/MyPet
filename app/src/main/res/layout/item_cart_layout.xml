@@ -20,7 +20,7 @@
 
         <ImageView
             android:id="@+id/iv_cart_item_image"
-            android:layout_width="@dimen/cart_item_image_width"
+            android:layout_width="84dp"
             android:layout_height="@dimen/cart_item_image_height"
             android:background="@color/colorImageViewBackground"
             android:contentDescription="@string/content_description"

@@ -8,10 +8,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication1.R
 import com.example.myapplication1.firestore.FirestoreClass
 import com.example.myapplication1.models.CartItem
+import com.example.myapplication1.models.Product
 import com.example.myapplication1.ui.adapters.CartItemsListAdapter
 import com.example.myapplication1.utils.Constants
 import com.example.myapplication1.utils.Formatter
-import com.myshoppal.models.Product
 import kotlinx.android.synthetic.main.activity_cart_list.*
 
 class CartListActivity : BaseActivity() {
