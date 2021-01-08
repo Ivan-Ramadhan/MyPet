@@ -18,7 +18,7 @@ class PilihJenisMakanan : AppCompatActivity() {
 
             val move = Intent(this@PilihJenisMakanan, CatWetFoodActivity::class.java)
                 .apply {
-                    putExtra(Constants.PRODUCT_CATEGORY,Constants.DRY_FOOD)
+                    putExtra(Constants.PRODUCT_CATEGORY,Constants.DRY_CAT_FOOD)
                     putExtra(Constants.PET,intent.getStringExtra(Constants.PET))
                     putExtra(Constants.PRODUCT_TYPE,intent.getStringExtra(Constants.PRODUCT_TYPE))
                 }
@@ -30,7 +30,7 @@ class PilihJenisMakanan : AppCompatActivity() {
 
             val move = Intent(this@PilihJenisMakanan, CatWetFoodActivity::class.java)
                 .apply {
-                    putExtra(Constants.PRODUCT_CATEGORY,Constants.WET_FOOD)
+                    putExtra(Constants.PRODUCT_CATEGORY,Constants.WET_CAT_FOOD)
                     putExtra(Constants.PET,intent.getStringExtra(Constants.PET))
                     putExtra(Constants.PRODUCT_TYPE,intent.getStringExtra(Constants.PRODUCT_TYPE))
                 }
@@ -42,7 +42,7 @@ class PilihJenisMakanan : AppCompatActivity() {
 
             val move = Intent(this@PilihJenisMakanan, CatWetFoodActivity::class.java)
                 .apply {
-                    putExtra(Constants.PRODUCT_CATEGORY,Constants.SNACK)
+                    putExtra(Constants.PRODUCT_CATEGORY,Constants.SNACK_CAT_FOOD)
                     putExtra(Constants.PET,intent.getStringExtra(Constants.PET))
                     putExtra(Constants.PRODUCT_TYPE,intent.getStringExtra(Constants.PRODUCT_TYPE))
                 }

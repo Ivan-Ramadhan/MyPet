@@ -97,12 +97,12 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
                 // Accessories
                 else if(listType.get(position).equals("Accessories") && rb_cat.isChecked)
                 {
-                    listCategory = arrayOf("Choose Product Category...","Cat Shirt","Cat Neck Belt","Cat Hat","Cat Glasses","Cat Shoes")
+                    listCategory = arrayOf("Choose Product Category...","Cat Clothes","Cat Neck Belt","Cat Hat","Cat Glasses","Cat Shoes")
                 }
 
                 else if(listType.get(position).equals("Accessories") && rb_dog.isChecked)
                 {
-                    listCategory = arrayOf("Choose Product Category...","Dog Glasses","Nackles","Leash")
+                    listCategory = arrayOf("Choose Product Category...","Dog Clothes","Dog Neck Belt","Dog Hat","Cat Glasses","Dog Shoes")
                 }
 
                 // FOOD

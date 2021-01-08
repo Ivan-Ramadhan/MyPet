@@ -88,11 +88,17 @@ object Constants {
 
     const val FOOD: String = "Food"
 
-    const val DRY_FOOD = "Dry Cat Food"
+    const val DRY_CAT_FOOD = "Dry Cat Food"
 
-    const val WET_FOOD = "Wet Cat Food"
+    const val WET_CAT_FOOD = "Wet Cat Food"
 
-    const val SNACK = "Snack"
+    const val SNACK_CAT_FOOD = "Snack Cat Food"
+
+    const val DRY_DOG_FOOD = "Dry Dog Food"
+
+    const val WET_DOG_FOOD = "Wet Dog Food"
+
+    const val SNACK_DOG_FOOD = "Snack Dog Food"
 
     fun showImageChooser(activity: Activity) {
         // An intent for launching the image selection of phone storage.
