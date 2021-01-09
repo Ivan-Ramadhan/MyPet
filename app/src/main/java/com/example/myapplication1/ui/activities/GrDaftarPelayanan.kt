@@ -50,6 +50,24 @@ class GrDaftarPelayanan : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btn_gr_cat_nailcut.setOnClickListener {
+
+            val pindah = Intent(this@GrDaftarPelayanan, GrKeranjang::class.java)
+                .apply {
+
+                }
+
+            startActivity(pindah)
+        }
+        btn_gr_cat_hairtreatment.setOnClickListener {
+
+            val pindah = Intent(this@GrDaftarPelayanan, GrKeranjang::class.java)
+                .apply {
+
+                }
+
+            startActivity(pindah)
+        }
     }
 
 

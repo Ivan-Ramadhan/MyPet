@@ -21,5 +21,12 @@ class PenitipanJenisHewan : AppCompatActivity() {
                 }
             startActivity(pindah)
         }
+        button18.setOnClickListener {
+
+            val pindah = Intent(this@PenitipanJenisHewan, PenitipanDurasi::class.java)
+                .apply {
+                }
+            startActivity(pindah)
+        }
     }
 }

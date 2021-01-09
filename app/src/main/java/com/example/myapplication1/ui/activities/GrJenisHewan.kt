@@ -23,17 +23,15 @@ class GrJenisHewan : AppCompatActivity() {
             startActivity(pindah)
         }
 
-//        btn_gr_dog.setOnClickListener {
-//
-//            val pindah = Intent(this@GrJenisHewan, GrDaftarPelayanan::class.java)
-//                .apply {
-//                    putExtra(Constants.PET, Constants.CAT)
-//                    putExtra(Constants.PRODUCT_TYPE,intent.getStringExtra(Constants.PRODUCT_TYPE))
-//                }
-//
-//            startActivity(pindah)
-//        }
+        btn_gr_dog.setOnClickListener {
 
+            val pindah = Intent(this@GrJenisHewan, GrLayananAnjing::class.java)
+                .apply {
+
+                }
+
+            startActivity(pindah)
+        }
     }
 
 

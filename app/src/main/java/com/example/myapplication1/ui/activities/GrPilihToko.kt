@@ -17,6 +17,16 @@ class GrPilihToko : AppCompatActivity() {
                 GrJenisHewan::class.java)
             startActivity(intent);
         })
+        buttonLittle.setOnClickListener(View.OnClickListener {
+            var intent = Intent(this,
+                GrJenisHewan::class.java)
+            startActivity(intent);
+        })
+        buttonJBB.setOnClickListener(View.OnClickListener {
+            var intent = Intent(this,
+                GrJenisHewan::class.java)
+            startActivity(intent);
+        })
         }
 
     }

@@ -20,5 +20,19 @@ class PenitipanDurasi : AppCompatActivity() {
                 }
             startActivity(pindah)
         }
+        buttonMingguan.setOnClickListener {
+
+            val pindah = Intent(this@PenitipanDurasi, PenitipanKeranjang::class.java)
+                .apply {
+                }
+            startActivity(pindah)
+        }
+        buttonBulanan.setOnClickListener {
+
+            val pindah = Intent(this@PenitipanDurasi, PenitipanKeranjang::class.java)
+                .apply {
+                }
+            startActivity(pindah)
+        }
     }
 }

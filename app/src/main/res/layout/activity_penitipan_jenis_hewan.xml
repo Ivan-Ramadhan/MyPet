@@ -58,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_semibold"
-        android:text="Jenis Hewan"
+        android:text="Choose Your Pet"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
@@ -85,9 +85,9 @@
         android:id="@+id/button18"
         android:layout_width="190dp"
         android:layout_height="134dp"
-        android:background="#FFFFFF"
+        android:background="@null"
         android:shadowColor="@color/colorWhite"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
@@ -101,23 +101,11 @@
         android:layout_height="59dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintHorizontal_bias="0.156"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.614"
+        app:layout_constraintVertical_bias="0.616"
         app:srcCompat="@drawable/layout2" />
-
-    <ImageView
-        android:id="@+id/imageView58"
-        android:layout_width="105dp"
-        android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.695"
-        app:srcCompat="@drawable/dog" />
 
     <ImageView
         android:id="@+id/imageView59"
@@ -128,20 +116,40 @@
         app:layout_constraintHorizontal_bias="0.802"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.611"
+        app:layout_constraintVertical_bias="0.613"
         app:srcCompat="@drawable/maxresdefault" />
 
-    <ImageView
-        android:id="@+id/imageView60"
-        android:layout_width="113dp"
-        android:layout_height="56dp"
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="95dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:text="Dog"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.845"
+        app:layout_constraintHorizontal_bias="0.139"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.693"
-        app:srcCompat="@drawable/cat" />
+        app:layout_constraintVertical_bias="0.662" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="95dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:text="Cat"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.662" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

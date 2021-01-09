@@ -84,31 +84,19 @@
             app:layout_constraintTop_toTopOf="@+id/imageView7" />
 
         <ImageView
-            android:id="@+id/imageView37"
-            android:layout_width="48dp"
-            android:layout_height="87dp"
+            android:id="@+id/imageView36"
+            android:layout_width="47dp"
+            android:layout_height="71dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.349"
+            app:layout_constraintHorizontal_bias="0.343"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.589"
-            app:srcCompat="@drawable/whatsapp_image_2020_12_04_at_23_54_07" />
-
-        <ImageView
-            android:id="@+id/imageView38"
-            android:layout_width="60dp"
-            android:layout_height="74dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.331"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.787"
-            app:srcCompat="@drawable/whatsapp_image_2020_12_04_at_23_54_07__2_" />
+            app:layout_constraintVertical_bias="0.407"
+            app:srcCompat="@drawable/whatsapp_image_2020_12_04_at_23_54_07__1_" />
 
         <Button
-            android:id="@+id/btn_gr_cat_haircut"
+            android:id="@+id/buttonCukurAnjing"
             android:layout_width="220dp"
             android:layout_height="108dp"
             android:background="@null"
@@ -121,7 +109,7 @@
             tools:visibility="visible" />
 
         <Button
-            android:id="@+id/btn_gr_cat_nailcut"
+            android:id="@+id/buttonPotongKukuAnjing"
             android:layout_width="229dp"
             android:layout_height="108dp"
             android:background="@null"
@@ -134,7 +122,7 @@
             tools:visibility="visible" />
 
         <Button
-            android:id="@+id/btn_gr_cat_hairtreatment"
+            android:id="@+id/buttonPerawatanAnjing"
             android:layout_width="228dp"
             android:layout_height="116dp"
             android:background="@null"
@@ -195,16 +183,28 @@
             app:layout_constraintVertical_bias="0.787" />
 
         <ImageView
-            android:id="@+id/imageView13"
-            android:layout_width="49dp"
-            android:layout_height="72dp"
+            android:id="@+id/imageView14"
+            android:layout_width="52dp"
+            android:layout_height="94dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintHorizontal_bias="0.348"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.406"
-            app:srcCompat="@drawable/kucing_1" />
+            app:layout_constraintVertical_bias="0.585"
+            app:srcCompat="@drawable/anjing_2" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="49dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.353"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.781"
+            app:srcCompat="@drawable/anjing_3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
