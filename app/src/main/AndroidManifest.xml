@@ -11,8 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activities.HealthDogProductCategoryActivity"></activity>
-        <activity android:name=".ui.activities.HealthProductCategoryActivity" />
+        <activity
+            android:name=".ui.activities.HealthDogProductCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity
+            android:name=".ui.activities.HealthProductCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
         <activity android:name=".ui.activities.GrLayananAnjing" />
         <activity
             android:name=".ui.activities.Food_DogFoodCategoryActivity"

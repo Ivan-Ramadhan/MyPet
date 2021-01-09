@@ -16,7 +16,7 @@ class GrLayananAnjing : AppCompatActivity() {
 
             val intent = Intent(this@GrLayananAnjing, CatWetFoodActivity::class.java)
                 .apply {
-                    putExtra(Constants.PRODUCT_CATEGORY, Constants.CAT_HAIR_CUT)
+                    putExtra(Constants.PRODUCT_CATEGORY, Constants.DOG_HAIR_CUT)
                     putExtra(Constants.PET, intent.getStringExtra(Constants.PET))
                     putExtra(Constants.PRODUCT_TYPE, intent.getStringExtra(Constants.PRODUCT_TYPE))
                 }
@@ -28,7 +28,7 @@ class GrLayananAnjing : AppCompatActivity() {
 
             val intent = Intent(this@GrLayananAnjing, CatWetFoodActivity::class.java)
                 .apply {
-                    putExtra(Constants.PRODUCT_CATEGORY, Constants.CAT_NAIL_CUT)
+                    putExtra(Constants.PRODUCT_CATEGORY, Constants.DOG_NAIL_CUT)
                     putExtra(Constants.PET, intent.getStringExtra(Constants.PET))
                     putExtra(Constants.PRODUCT_TYPE, intent.getStringExtra(Constants.PRODUCT_TYPE))
                 }
@@ -40,7 +40,7 @@ class GrLayananAnjing : AppCompatActivity() {
 
             val intent = Intent(this@GrLayananAnjing, CatWetFoodActivity::class.java)
                 .apply {
-                    putExtra(Constants.PRODUCT_CATEGORY, Constants.CAT_HAIR_TREATMENT)
+                    putExtra(Constants.PRODUCT_CATEGORY, Constants.DOG_HAIR_TREATMENT)
                     putExtra(Constants.PET, intent.getStringExtra(Constants.PET))
                     putExtra(Constants.PRODUCT_TYPE, intent.getStringExtra(Constants.PRODUCT_TYPE))
                 }

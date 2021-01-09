@@ -27,7 +27,8 @@ class GrJenisHewan : AppCompatActivity() {
 
             val pindah = Intent(this@GrJenisHewan, GrLayananAnjing::class.java)
                 .apply {
-
+                    putExtra(Constants.PET, Constants.DOG)
+                    putExtra(Constants.PRODUCT_TYPE,intent.getStringExtra(Constants.PRODUCT_TYPE))
                 }
 
             startActivity(pindah)
