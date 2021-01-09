@@ -118,20 +118,21 @@
         android:layout_height="wrap_content"
 
         android:background="@drawable/bgshadow6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         android:paddingStart="@dimen/cart_item_paddingStartEnd"
         android:paddingTop="@dimen/cart_item_paddingTopBottom"
         android:paddingEnd="@dimen/cart_item_paddingStartEnd"
         android:paddingBottom="@dimen/cart_item_paddingTopBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ll_daycare_pet_cat">
+
         <LinearLayout
             android:id="@+id/ll_cart_item_image_wetfood"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="22dp"
             android:padding="@dimen/category_item_image_padding">
 
             <ImageView
@@ -141,7 +142,7 @@
                 android:background="@color/colorWhite"
                 android:contentDescription="@string/content_description"
                 android:scaleType="fitXY"
-                android:src="@drawable/layout2"/>
+                android:src="@drawable/layout2" />
         </LinearLayout>
 
         <TextView

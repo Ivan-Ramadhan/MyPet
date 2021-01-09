@@ -27,7 +27,7 @@ class PenitipanJenisHewan : AppCompatActivity() {
 
         ll_daycare_pet_dog.setOnClickListener(View.OnClickListener {
             var intent = Intent(this,
-                PenitipanDurasi::class.java)
+                PenitipanDurasiAnjing::class.java)
                 .apply {
                     putExtra(Constants.PET, Constants.DOG)
                     putExtra(Constants.PRODUCT_TYPE,intent.getStringExtra(Constants.PRODUCT_TYPE))
