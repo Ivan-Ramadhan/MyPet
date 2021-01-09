@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication1.R
 import com.example.myapplication1.utils.Constants
-import kotlinx.android.synthetic.main.activity_penitipan_durasi.*
 import kotlinx.android.synthetic.main.activity_penitipan_durasi_anjing.*
 
 class PenitipanDurasiAnjing : AppCompatActivity() {
@@ -13,7 +12,7 @@ class PenitipanDurasiAnjing : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_penitipan_durasi_anjing)
         setupActionBar()
-        ll_cat_daily.setOnClickListener{
+        ll_dog_daily.setOnClickListener{
 
             val move = Intent(this@PenitipanDurasiAnjing, CatWetFoodActivity::class.java)
                 .apply {
@@ -25,7 +24,7 @@ class PenitipanDurasiAnjing : AppCompatActivity() {
             startActivity(move)
         }
 
-        ll_cat_weekly.setOnClickListener{
+        ll_dog_weekly.setOnClickListener{
 
             val move = Intent(this@PenitipanDurasiAnjing, CatWetFoodActivity::class.java)
                 .apply {
@@ -37,7 +36,7 @@ class PenitipanDurasiAnjing : AppCompatActivity() {
             startActivity(move)
         }
 
-        ll_cat_monthly.setOnClickListener{
+        ll_dog_monthly.setOnClickListener{
 
             val move = Intent(this@PenitipanDurasiAnjing, CatWetFoodActivity::class.java)
                 .apply {
