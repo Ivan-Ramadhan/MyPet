@@ -125,6 +125,16 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
                     listCategory = arrayOf("Choose Product Category...","Dog Vitamins","Dog Suplements","Dog Medicine")
                 }
 
+                // Daycare
+                else if(listType.get(position).equals("Day Care") && rb_cat.isChecked)
+                {
+                    listCategory = arrayOf("Choose Product Category...","Cat Daily","Cat Weekly","Cat Monthly")
+                }
+                else if(listType.get(position).equals("Day Care") && rb_dog.isChecked)
+                {
+                    listCategory = arrayOf("Choose Product Category...","Dog Daily","Dog Weekly","Dog Monthly")
+                }
+
 
 
                 mProductType = listType.get(position).trim { it <= ' ' }

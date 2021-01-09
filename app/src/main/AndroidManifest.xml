@@ -12,15 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.activities.HealthDogProductCategoryActivity"
+            android:name=".ui.activities.PenitipanDurasiAnjing"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             />
         <activity
+            android:name=".ui.activities.HealthDogProductCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".ui.activities.HealthProductCategoryActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ui.activities.GrLayananAnjing" />
         <activity
             android:name=".ui.activities.Food_DogFoodCategoryActivity"
@@ -60,8 +63,15 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ui.activities.PenitipanKeranjang" />
         <activity android:name=".ui.activities.GrPilihToko" />
-        <activity android:name=".ui.activities.PenitipanDurasi" />
-        <activity android:name=".ui.activities.PenitipanJenisHewan" />
+        <activity
+            android:name=".ui.activities.PenitipanDurasi"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.activities.PenitipanJenisHewan"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity android:name=".ui.activities.PenitipanPilihToko" />
         <activity
             android:name=".ui.activities.SettingsActivity"

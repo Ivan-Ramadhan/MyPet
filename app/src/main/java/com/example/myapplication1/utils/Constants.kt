@@ -133,6 +133,13 @@ object Constants {
     const val DOG_SUPLEMENTS: String = "Dog Suplements"
     const val DOG_MEDICINE: String = "Dog Medicine"
 
+    const val CAT_DAILY: String = "Cat Daily"
+    const val CAT_WEEKLY: String = "Cat Weekly"
+    const val CAT_MONTHLY: String = "Cat Monthly"
+
+    const val DOG_DAILY: String = "Dog Daily"
+    const val DOG_WEEKLY: String = "Dog Weekly"
+    const val DOG_MONTHLY: String = "Dog Monthly"
 
 
     fun showImageChooser(activity: Activity) {

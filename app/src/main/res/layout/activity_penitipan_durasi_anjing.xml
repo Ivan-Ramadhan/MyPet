@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.PenitipanJenisHewan">
+    tools:context=".ui.activities.PenitipanDurasiAnjing">
+
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_daycare_pet"
+        android:id="@+id/toolbar_dog_daycare_category"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentTop="true"
-        android:background="@drawable/app_gradient_color_background">
+        android:background="@drawable/app_gradient_color_background"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/tv_title"
@@ -23,24 +25,26 @@
             android:text=""
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/toolbar_title_text_size"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp" />
 
     </androidx.appcompat.widget.Toolbar>
 
+
     <ImageView
-        android:id="@+id/imagebar_daycare_pet"
+        android:id="@+id/imagebar_dog_daycare_category"
         android:layout_width="423dp"
         android:layout_height="151dp"
         android:layout_marginTop="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_daycare_pet"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_dog_daycare_category"
         app:srcCompat="@drawable/grouphewan" />
 
     <TextView
-        android:id="@+id/title_health_pet"
+        android:id="@+id/title_dogdaycarecategory"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -53,18 +57,18 @@
         android:gravity="center"
         android:paddingTop="@dimen/title_padding"
         android:paddingBottom="@dimen/title_padding"
-        android:text="@string/lbl_food_pet"
+        android:text="@string/lbl_dog_daycare_category"
         android:textColor="@android:color/white"
         android:textSize="@dimen/btn_textSize"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imagebar_daycare_pet" />
+        app:layout_constraintTop_toBottomOf="@id/imagebar_dog_daycare_category" />
 
     <LinearLayout
-        android:id="@+id/ll_daycare_pet_cat"
+        android:id="@+id/ll_dog_daily"
         android:layout_width="330dp"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/bgshadow6"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,10 +78,10 @@
         android:paddingEnd="@dimen/cart_item_paddingStartEnd"
         android:paddingBottom="@dimen/cart_item_paddingTopBottom"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_health_pet">
+        app:layout_constraintTop_toBottomOf="@id/title_dogdaycarecategory">
         <LinearLayout
-            android:id="@+id/ll_cart_item_image_dryfood"
-            android:layout_marginTop="22dp"
+            android:id="@+id/ll_cart_item_image_vitamins"
+            android:layout_marginTop="15dp"
             android:layout_marginStart="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -85,19 +89,19 @@
             android:padding="@dimen/category_item_image_padding">
 
             <ImageView
-                android:id="@+id/iv_cart_item_image_dryfood"
-                android:layout_width="@dimen/pet_item_image_width"
-                android:layout_height="@dimen/pet_item_image_height"
+                android:id="@+id/iv_cart_item_image_vitamins"
+                android:layout_width="@dimen/cart_item_image_width"
+                android:layout_height="@dimen/cart_item_image_height"
                 android:layout_gravity="center|left"
                 android:background="@color/colorWhite"
                 android:contentDescription="@string/content_description"
                 android:foregroundGravity="center_vertical"
                 android:scaleType="fitXY"
-                android:src="@drawable/maxresdefault" />
+                android:src="@drawable/daycare_calendar" />
         </LinearLayout>
 
         <TextView
-            android:id="@+id/tv_health_pet"
+            android:id="@+id/title_dog_dry_food"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -105,17 +109,17 @@
             android:fontFamily="@font/poppins_semibold"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
-            android:text="@string/lbl_cat"
+            android:text="@string/lbl_dog_daycare_category_daily"
             android:textColor="@color/colorPurpleDark"
-            android:textSize="@dimen/pet_textSize"
+            android:textSize="@dimen/category_textSize"
             android:textStyle="bold"></TextView>
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/ll_daycare_pet_dog"
+        android:id="@+id/ll_dog_weekly"
         android:layout_width="330dp"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
 
         android:background="@drawable/bgshadow6"
         app:layout_constraintEnd_toEndOf="parent"
@@ -125,27 +129,27 @@
         android:paddingEnd="@dimen/cart_item_paddingStartEnd"
         android:paddingBottom="@dimen/cart_item_paddingTopBottom"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ll_daycare_pet_cat">
+        app:layout_constraintTop_toBottomOf="@id/ll_dog_daily">
         <LinearLayout
-            android:id="@+id/ll_cart_item_image_wetfood"
+            android:id="@+id/ll_cart_item_image_suplements"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="15dp"
             android:layout_marginStart="20dp"
             android:padding="@dimen/category_item_image_padding">
 
             <ImageView
-                android:id="@+id/iv_cart_item_image"
-                android:layout_width="@dimen/pet_item_image_width"
-                android:layout_height="@dimen/pet_item_image_height"
+                android:id="@+id/iv_cart_item_image_suplements"
+                android:layout_width="@dimen/cart_item_image_width"
+                android:layout_height="@dimen/cart_item_image_height"
                 android:background="@color/colorWhite"
                 android:contentDescription="@string/content_description"
                 android:scaleType="fitXY"
-                android:src="@drawable/layout2"/>
+                android:src="@drawable/daycare_calendar"/>
         </LinearLayout>
 
         <TextView
-            android:id="@+id/tv_health_dog"
+            android:id="@+id/title_dog_wet_food"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -153,11 +157,60 @@
             android:fontFamily="@font/poppins_semibold"
             android:foreground="?attr/selectableItemBackground"
             android:gravity="center"
-            android:text="@string/lbl_dog"
+            android:text="@string/lbl_dog_daycare_category_weekly"
             android:textColor="@color/colorPurpleDark"
-            android:textSize="@dimen/pet_textSize"
+            android:textSize="@dimen/category_textSize"
             android:textStyle="bold"></TextView>
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/ll_dog_monthly"
+        android:layout_width="330dp"
+        android:layout_height="120dp"
+
+        android:background="@drawable/bgshadow6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        android:paddingStart="@dimen/cart_item_paddingStartEnd"
+        android:paddingTop="@dimen/cart_item_paddingTopBottom"
+        android:paddingEnd="@dimen/cart_item_paddingStartEnd"
+        android:paddingBottom="@dimen/cart_item_paddingTopBottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_dog_weekly">
+        <LinearLayout
+            android:id="@+id/ll_cart_item_image_medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            android:padding="@dimen/category_item_image_padding">
+
+            <ImageView
+                android:id="@+id/iv_cart_item_image_medicine"
+                android:layout_width="@dimen/cart_item_image_width"
+                android:layout_height="@dimen/cart_item_image_height"
+                android:background="@color/colorWhite"
+
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitXY"
+                android:src="@drawable/daycare_calendar"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_dog_medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/lbl_dog_daycare_category_monthly"
+            android:textColor="@color/colorPurpleDark"
+            android:textSize="@dimen/category_textSize"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"></TextView>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

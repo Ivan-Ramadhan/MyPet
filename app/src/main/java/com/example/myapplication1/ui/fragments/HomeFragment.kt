@@ -113,7 +113,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
                 R.id.tv_day_care -> {
 
-                    val intent = Intent(activity, PenitipanPilihToko::class.java)
+                    val intent = Intent(activity, PenitipanJenisHewan::class.java)
                         .apply {
                             putExtra(Constants.PRODUCT_TYPE,Constants.DAY_CARE)
                         }

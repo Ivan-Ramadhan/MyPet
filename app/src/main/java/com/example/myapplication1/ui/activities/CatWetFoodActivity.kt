@@ -73,7 +73,7 @@ class CatWetFoodActivity : BaseActivity() {
             rv_catwetfood_items.visibility = View.VISIBLE
             tv_no_catwetfood_items_found.visibility = View.GONE
 
-            if(mProductType.equals(Constants.GROOMING))
+            if(mProductType.equals(Constants.GROOMING) || mProductType.equals(Constants.DAY_CARE))
             rv_catwetfood_items.layoutManager = GridLayoutManager(this, 1)
             else{
                 rv_catwetfood_items.layoutManager = GridLayoutManager(this, 2)

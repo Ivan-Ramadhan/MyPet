@@ -217,5 +217,13 @@
     <string name="lbl_dog_health_category_suplements">Suplements</string>
     <string name="lbl_dog_health_category_medicine">Medicine</string>
     <string name="lbl_cat_heatlh_category_vitamin">Vitamins</string>
+    <string name="lbl_cat_daycare_category">Choose Duration of Stay</string>
+    <string name="lbl_cat_daycare_category_daily">Daily</string>
+    <string name="lbl_cat_daycare_category_weekly">Weekly</string>
+    <string name="lbl_cat_daycare_category_monthly">Monthly</string>
+    <string name="lbl_dog_daycare_category">Choose Duration of Stay</string>
+    <string name="lbl_dog_daycare_category_daily">Daily</string>
+    <string name="lbl_dog_daycare_category_weekly">Weekly</string>
+    <string name="lbl_dog_daycare_category_monthly">Monthly</string>
 
 </resources>
