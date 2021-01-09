@@ -12,6 +12,8 @@ class GrLayananAnjing : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gr_layanan_anjing)
 
+        setupActionBar()
+
         btn_gr_dog_haircut.setOnClickListener {
 
             val intent = Intent(this@GrLayananAnjing, CatWetFoodActivity::class.java)
@@ -47,5 +49,17 @@ class GrLayananAnjing : AppCompatActivity() {
 
             startActivity(intent)
         }
+    }
+
+    private fun setupActionBar() {
+
+        setSupportActionBar(toolbar_gr_dog_category)
+
+        val actionBar = supportActionBar
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true)
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_white_color_back_24dp)
+        }
+        toolbar_gr_dog_category.setNavigationOnClickListener { onBackPressed() }
     }
 }

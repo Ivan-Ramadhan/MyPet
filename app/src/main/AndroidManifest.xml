@@ -152,8 +152,12 @@
         <activity
             android:name=".ui.activities.PilihJenisHewan"
             android:theme="@style/AppTheme.HideActionBar" />
-        <activity android:name=".ui.activities.GrDaftarPelayanan" />
-        <activity android:name=".ui.activities.GrJenisHewan" />
+        <activity android:name=".ui.activities.GrDaftarPelayanan"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ui.activities.GrJenisHewan"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".ui.activities.GrKeranjang" />
         <activity
             android:name=".ui.activities.AksesorisJenisBarang"

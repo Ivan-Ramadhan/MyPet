@@ -44,7 +44,7 @@
             app:layout_constraintHorizontal_bias="0.171"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.424"
+            app:layout_constraintVertical_bias="0.500"
             app:srcCompat="@drawable/capacity7" />
 
         <ImageView
@@ -68,7 +68,7 @@
             app:layout_constraintHorizontal_bias="0.171"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.575"
+            app:layout_constraintVertical_bias="0.660"
             app:srcCompat="@drawable/capacity7" />
 
         <ImageView
@@ -81,7 +81,7 @@
             app:layout_constraintHorizontal_bias="0.899"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.566"
+            app:layout_constraintVertical_bias="0.660"
             app:srcCompat="@drawable/capacity7" />
 
         <ImageView
@@ -94,7 +94,7 @@
             app:layout_constraintHorizontal_bias="0.531"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.768"
+            app:layout_constraintVertical_bias="0.820"
             app:srcCompat="@drawable/capacity7" />
 
         <ImageView
@@ -107,7 +107,7 @@
             app:layout_constraintHorizontal_bias="0.899"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.424"
+            app:layout_constraintVertical_bias="0.500"
             app:srcCompat="@drawable/capacity7" />
 
         <ImageView
@@ -119,7 +119,7 @@
             app:layout_constraintHorizontal_bias="0.579"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.213"
+            app:layout_constraintVertical_bias="0.350"
             app:srcCompat="@drawable/rectangle_94" />
 
         <TextView

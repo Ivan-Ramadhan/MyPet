@@ -15,7 +15,7 @@ class AksesorisJenisHewan : AppCompatActivity() {
         setContentView(R.layout.activity_aksesoris_jenis_hewan)
         setupActionBar()
 
-        btn_acc_cat.setOnClickListener(View.OnClickListener {
+        ll_acc_pet_cat.setOnClickListener(View.OnClickListener {
             var intent = Intent(this,
                 AksesorisJenisBarang::class.java)
                 .apply {
@@ -26,7 +26,7 @@ class AksesorisJenisHewan : AppCompatActivity() {
             startActivity(intent);
         })
 
-        btn_acc_dog.setOnClickListener(View.OnClickListener {
+        ll_acc_pet_dog.setOnClickListener(View.OnClickListener {
             var intent = Intent(this,
                 AksesorisJenisBarangAnjing::class.java)
                 .apply {

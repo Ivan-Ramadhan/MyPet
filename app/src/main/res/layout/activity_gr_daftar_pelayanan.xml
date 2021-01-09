@@ -10,12 +10,36 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_gr_cat_category"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/app_gradient_color_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_acc_cat_category">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingStart="@dimen/toolbar_title_paddingStart"
+                android:paddingEnd="0dp"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/toolbar_title_text_size"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
 
         <ImageView
             android:id="@+id/imageView23"
             android:layout_width="418dp"
             android:layout_height="150dp"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_gr_cat_category"
             app:srcCompat="@drawable/grouphewan"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="-4dp" />
@@ -29,15 +53,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.563"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.406"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_gr_cat_category"
+            app:layout_constraintVertical_bias="0.557"
             app:srcCompat="@drawable/capacity7" />
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="219dp"
             android:layout_height="114dp"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="40dp"
             android:background="@null"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +73,7 @@
             android:id="@+id/imageView34"
             android:layout_width="228dp"
             android:layout_height="114dp"
-            android:layout_marginBottom="236dp"
+            android:layout_marginBottom="140dp"
             android:background="@null"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -63,10 +87,10 @@
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.579"
+            app:layout_constraintHorizontal_bias="0.644"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.213"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_gr_cat_category"
+            app:layout_constraintVertical_bias="0.336"
             app:srcCompat="@drawable/rectangle_94" />
 
         <TextView
@@ -89,10 +113,10 @@
             android:layout_height="87dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.349"
+            app:layout_constraintHorizontal_bias="0.352"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.589"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_gr_cat_category"
+            app:layout_constraintVertical_bias="0.744"
             app:srcCompat="@drawable/whatsapp_image_2020_12_04_at_23_54_07" />
 
         <ImageView
@@ -101,10 +125,10 @@
             android:layout_height="74dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.331"
+            app:layout_constraintHorizontal_bias="0.33"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.787"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_gr_cat_category"
+            app:layout_constraintVertical_bias="0.896"
             app:srcCompat="@drawable/whatsapp_image_2020_12_04_at_23_54_07__2_" />
 
         <Button
@@ -114,10 +138,10 @@
             android:background="@null"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.554"
+            app:layout_constraintHorizontal_bias="0.575"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.406"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_gr_cat_category"
+            app:layout_constraintVertical_bias="0.557"
             tools:visibility="visible" />
 
         <Button
@@ -127,10 +151,10 @@
             android:background="@null"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.58"
+            app:layout_constraintHorizontal_bias="0.582"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.628"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_gr_cat_category"
+            app:layout_constraintVertical_bias="0.724"
             tools:visibility="visible" />
 
         <Button
@@ -142,8 +166,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.579"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.839"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_gr_cat_category"
+            app:layout_constraintVertical_bias="0.935"
             tools:visibility="visible" />
 
         <TextView
@@ -159,8 +183,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.65"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.411" />
+            app:layout_constraintTop_toBottomOf="@id/toolbar_gr_cat_category"
+            app:layout_constraintVertical_bias="0.546" />
 
         <TextView
             android:id="@+id/textView33"
@@ -175,8 +199,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.65"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.59" />
+            app:layout_constraintTop_toBottomOf="@id/toolbar_gr_cat_category"
+            app:layout_constraintVertical_bias="0.73" />
 
         <TextView
             android:id="@+id/textView34"
@@ -191,8 +215,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.65"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.787" />
+            app:layout_constraintTop_toBottomOf="@id/toolbar_gr_cat_category"
+            app:layout_constraintVertical_bias="0.888" />
 
         <ImageView
             android:id="@+id/imageView13"
@@ -200,10 +224,10 @@
             android:layout_height="72dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintHorizontal_bias="0.353"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.406"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_gr_cat_category"
+            app:layout_constraintVertical_bias="0.542"
             app:srcCompat="@drawable/kucing_1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

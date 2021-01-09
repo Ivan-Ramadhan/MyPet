@@ -11,8 +11,9 @@ class GrJenisHewan : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gr_jenis_hewan2)
+        setupActionBar()
 
-        btn_gr_cat.setOnClickListener {
+        ll_gr_pet_cat.setOnClickListener {
 
             val pindah = Intent(this@GrJenisHewan, GrDaftarPelayanan::class.java)
                 .apply {
@@ -23,7 +24,7 @@ class GrJenisHewan : AppCompatActivity() {
             startActivity(pindah)
         }
 
-        btn_gr_dog.setOnClickListener {
+        ll_gr_pet_dog.setOnClickListener {
 
             val pindah = Intent(this@GrJenisHewan, GrLayananAnjing::class.java)
                 .apply {
@@ -34,6 +35,16 @@ class GrJenisHewan : AppCompatActivity() {
             startActivity(pindah)
         }
     }
+    private fun setupActionBar() {
 
+        setSupportActionBar(toolbar_gr_pet)
+
+        val actionBar = supportActionBar
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true)
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_white_color_back_24dp)
+        }
+        toolbar_gr_pet.setNavigationOnClickListener { onBackPressed() }
+    }
 
 }

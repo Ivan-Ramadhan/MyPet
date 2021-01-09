@@ -13,7 +13,7 @@ class GrDaftarPelayanan : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gr_daftar_pelayanan)
 
-
+        setupActionBar()
         btn_gr_cat_haircut.setOnClickListener {
 
             val intent = Intent(this@GrDaftarPelayanan, CatWetFoodActivity::class.java)
@@ -50,6 +50,18 @@ class GrDaftarPelayanan : AppCompatActivity() {
             startActivity(intent)
         }
 
+    }
+
+    private fun setupActionBar() {
+
+        setSupportActionBar(toolbar_gr_cat_category)
+
+        val actionBar = supportActionBar
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true)
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_white_color_back_24dp)
+        }
+        toolbar_gr_cat_category.setNavigationOnClickListener { onBackPressed() }
     }
 
 }
