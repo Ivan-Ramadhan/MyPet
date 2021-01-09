@@ -17,7 +17,7 @@ class Health_JenisHewan : AppCompatActivity() {
 
         ll_health_pet_cat.setOnClickListener(View.OnClickListener {
             var intent = Intent(this,
-                Health_ListDokter::class.java)
+                HealthProductCategoryActivity::class.java)
                 .apply {
                     putExtra(Constants.PET, Constants.CAT)
                     putExtra(Constants.PRODUCT_TYPE,intent.getStringExtra(Constants.PRODUCT_TYPE))
@@ -28,7 +28,7 @@ class Health_JenisHewan : AppCompatActivity() {
 
         ll_health_pet_dog.setOnClickListener(View.OnClickListener {
             var intent = Intent(this,
-                Health_ListDokter::class.java)
+                HealthDogProductCategoryActivity::class.java)
                 .apply {
                     putExtra(Constants.PET,Constants.DOG)
                     putExtra(Constants.PRODUCT_TYPE,intent.getStringExtra(Constants.PRODUCT_TYPE))
