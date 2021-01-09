@@ -24,7 +24,9 @@
             android:name=".ui.activities.HealthProductCategoryActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ui.activities.GrLayananAnjing" />
+        <activity android:name=".ui.activities.GrLayananAnjing"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ui.activities.Food_DogFoodCategoryActivity"
             android:screenOrientation="portrait"
