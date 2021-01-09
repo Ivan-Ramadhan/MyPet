@@ -13,6 +13,11 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ui.activities.GrLayananAnjing"></activity>
         <activity
+            android:name=".ui.activities.Food_DogFoodCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity
             android:name=".ui.activities.SoldProductDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />

@@ -14,7 +14,7 @@ class PilihJenisMakanan : AppCompatActivity() {
 
         setupActionBar()
 
-        buttonMakananKering.setOnClickListener{
+        ll_cat_dryfood.setOnClickListener{
 
             val move = Intent(this@PilihJenisMakanan, CatWetFoodActivity::class.java)
                 .apply {
@@ -26,7 +26,7 @@ class PilihJenisMakanan : AppCompatActivity() {
             startActivity(move)
     }
 
-        buttonMakananBasah.setOnClickListener{
+        ll_cat_wetfood.setOnClickListener{
 
             val move = Intent(this@PilihJenisMakanan, CatWetFoodActivity::class.java)
                 .apply {
@@ -38,7 +38,7 @@ class PilihJenisMakanan : AppCompatActivity() {
             startActivity(move)
         }
 
-        buttonSnack.setOnClickListener{
+        ll_cat_snackfood.setOnClickListener{
 
             val move = Intent(this@PilihJenisMakanan, CatWetFoodActivity::class.java)
                 .apply {

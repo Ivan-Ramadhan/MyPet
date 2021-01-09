@@ -187,4 +187,8 @@
     <dimen name="category_textSize">24sp</dimen>
     <dimen name="category_item_image_padding">1dp</dimen>
 
+    <dimen name="pet_textSize">32sp</dimen>
+    <dimen name="pet_item_image_width">90dp</dimen>
+    <dimen name="pet_item_image_height">70dp</dimen>
+
 </resources>

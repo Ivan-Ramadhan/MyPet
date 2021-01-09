@@ -32,7 +32,7 @@
 
 
         <ImageView
-            android:id="@+id/imageView23"
+            android:id="@+id/imagebar_cat_food_category"
             android:layout_width="423dp"
             android:layout_height="151dp"
             android:layout_marginTop="0dp"
@@ -42,217 +42,176 @@
             app:layout_constraintTop_toBottomOf="@id/toolbar_mknjnmkn_activity"
             app:srcCompat="@drawable/grouphewan" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="206dp"
-                android:layout_height="102dp"
-                android:background="@null"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.482"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.502"
-                app:srcCompat="@drawable/capacity7" />
+    <TextView
+        android:id="@+id/title_catfoodcategory"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/title_background"
+        android:fontFamily="@font/poppins_semibold"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:paddingTop="@dimen/title_padding"
+        android:paddingBottom="@dimen/title_padding"
+        android:text="@string/lbl_cat_food_category"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/btn_textSize"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagebar_cat_food_category" />
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="206dp"
-                android:layout_height="102dp"
-                android:layout_marginBottom="80dp"
-                android:background="@null"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.478"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/capacity7" />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="Cemilan"
-                android:textColor="#5117AC"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.325"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.833" />
-
-            <ImageView
-                android:id="@+id/imageView16"
-                android:layout_width="206dp"
-                android:layout_height="102dp"
-                android:layout_marginBottom="200dp"
-                android:background="@null"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.473"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/capacity7" />
-
-            <Button
-                android:id="@+id/buttonMakananKering"
-                android:layout_width="205dp"
-                android:layout_height="79dp"
-                android:background="@null"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.48"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.682"
-                tools:visibility="invisible" />
-
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.495"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.333"
-                app:srcCompat="@drawable/rectangle_94" />
-
-            <TextView
-            android:id="@+id/txtJudul"
+    <LinearLayout
+        android:id="@+id/ll_cat_dryfood"
+        android:layout_width="330dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bgshadow6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        android:paddingStart="@dimen/cart_item_paddingStartEnd"
+        android:paddingTop="@dimen/cart_item_paddingTopBottom"
+        android:paddingEnd="@dimen/cart_item_paddingStartEnd"
+        android:paddingBottom="@dimen/cart_item_paddingTopBottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_catfoodcategory">
+        <LinearLayout
+            android:id="@+id/ll_cart_item_image_dryfood"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
+            android:padding="@dimen/category_item_image_padding">
+
+            <ImageView
+                android:id="@+id/iv_cart_item_image_dryfood"
+                android:layout_width="@dimen/cart_item_image_width"
+                android:layout_height="@dimen/cart_item_image_height"
+                android:layout_gravity="center|left"
+                android:background="@color/colorWhite"
+                android:contentDescription="@string/content_description"
+                android:foregroundGravity="center_vertical"
+                android:scaleType="fitXY"
+                android:src="@drawable/makanankering" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_cat_dry_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Pilih Jenis Makanan"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView7"
-            app:layout_constraintEnd_toEndOf="@+id/imageView7"
-            app:layout_constraintStart_toStartOf="@+id/imageView7"
-            app:layout_constraintTop_toTopOf="@+id/imageView7" />
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/lbl_dog_food_category_dryfood"
+            android:textColor="@color/colorPurpleDark"
+            android:textSize="@dimen/category_textSize"
+            android:textStyle="bold"></TextView>
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="Makanan"
-                android:textColor="#5117AC"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.334"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.474" />
+    </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="Makanan"
-                android:textColor="#5117AC"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.334"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.638" />
+    <LinearLayout
+        android:id="@+id/ll_cat_wetfood"
+        android:layout_width="330dp"
+        android:layout_height="120dp"
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="Basah"
-                android:textColor="#5117AC"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.305"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.525" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="Kering"
-                android:textColor="#5117AC"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.319"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.695" />
-
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="84dp"
-                android:layout_height="85dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.651"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.515"
-                app:srcCompat="@drawable/makananbasah" />
-
-            <ImageView
-                android:id="@+id/imageView11"
-                android:layout_width="82dp"
-                android:layout_height="86dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.653"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.689"
-                app:srcCompat="@drawable/makanankering" />
-
-            <ImageView
-                android:id="@+id/imageView17"
-                android:layout_width="76dp"
-                android:layout_height="69dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.635"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.85"
-                app:srcCompat="@drawable/cemilan" />
-
-
-            <Button
-                android:id="@+id/buttonMakananBasah"
-                android:layout_width="202dp"
-                android:layout_height="104dp"
-                android:background="@null"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.468"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.499" />
-
-    <Button
-        android:id="@+id/buttonSnack"
-        android:layout_width="202dp"
-        android:layout_height="104dp"
-        android:background="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/bgshadow6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.503"
+        android:paddingStart="@dimen/cart_item_paddingStartEnd"
+        android:paddingTop="@dimen/cart_item_paddingTopBottom"
+        android:paddingEnd="@dimen/cart_item_paddingStartEnd"
+        android:paddingBottom="@dimen/cart_item_paddingTopBottom"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.875" />
+        app:layout_constraintTop_toBottomOf="@id/ll_cat_dryfood">
+        <LinearLayout
+            android:id="@+id/ll_cart_item_image_wetfood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            android:padding="@dimen/category_item_image_padding">
+
+            <ImageView
+                android:id="@+id/iv_cart_item_image"
+                android:layout_width="@dimen/cart_item_image_width"
+                android:layout_height="@dimen/cart_item_image_height"
+                android:background="@color/colorWhite"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitXY"
+                android:src="@drawable/makananbasah"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_cat_wet_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/lbl_dog_food_category_wetfood"
+            android:textColor="@color/colorPurpleDark"
+            android:textSize="@dimen/category_textSize"
+            android:textStyle="bold"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cat_snackfood"
+        android:layout_width="330dp"
+        android:layout_height="120dp"
+
+        android:background="@drawable/bgshadow6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        android:paddingStart="@dimen/cart_item_paddingStartEnd"
+        android:paddingTop="@dimen/cart_item_paddingTopBottom"
+        android:paddingEnd="@dimen/cart_item_paddingStartEnd"
+        android:paddingBottom="@dimen/cart_item_paddingTopBottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_cat_wetfood">
+        <LinearLayout
+            android:id="@+id/ll_cart_item_image_snackfood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            android:padding="@dimen/category_item_image_padding">
+
+            <ImageView
+                android:id="@+id/iv_cart_item_image_snack"
+                android:layout_width="@dimen/cart_item_image_width"
+                android:layout_height="@dimen/cart_item_image_height"
+                android:background="@color/colorWhite"
+
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitXY"
+                android:src="@drawable/cemilan"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_cat_snack_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/lbl_dog_food_category_snackfood"
+            android:textColor="@color/colorPurpleDark"
+            android:textSize="@dimen/category_textSize"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"></TextView>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

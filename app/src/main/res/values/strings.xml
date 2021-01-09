@@ -205,5 +205,9 @@
     <string name="lbl_dog_food_category_dryfood">Dry Food</string>
     <string name="lbl_dog_food_category_wetfood">Wet Food</string>
     <string name="lbl_dog_food_category_snackfood">Snack</string>
+    <string name="lbl_cat_food_category">Choose Cat Food Category</string>
+    <string name="lbl_food_pet">Choose Your Pet</string>
+    <string name="lbl_cat">Cat</string>
+    <string name="lbl_dog">Dog</string>
 
 </resources>

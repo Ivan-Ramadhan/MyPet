@@ -11,9 +11,9 @@ class PilihJenisHewan : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pilih_jenis_hewan)
         setupActionBar()
-        txtJudul.text = intent.getStringExtra("makanan")
 
-        buttonMknKucing.setOnClickListener{
+
+        ll_pet_cat.setOnClickListener{
 
             val pindah = Intent(this@PilihJenisHewan, PilihJenisMakanan::class.java)
                 .apply {
@@ -24,7 +24,7 @@ class PilihJenisHewan : AppCompatActivity() {
             startActivity(pindah)
     }
 
-        buttonMknAnjing.setOnClickListener{
+        ll_pet_dog.setOnClickListener{
 
             val pindah = Intent(this@PilihJenisHewan, Food_DogFoodCategoryActivity::class.java)
                 .apply {

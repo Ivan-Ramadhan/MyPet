@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
-import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.myapplication1.R
@@ -30,17 +29,17 @@ class HomeFragment : Fragment(), View.OnClickListener {
     //        ViewModelProviders.of(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
 //        val textView: TextView = root.findViewById(R.id.text_home)
-        val btnMakanan: Button? = root.findViewById(R.id.buttonMenuMakanan)
-        val btnAksesoris: Button? = root.findViewById(R.id.buttonAksesoris)
-        val btnGrooming: Button? = root.findViewById(R.id.buttonGrooming)
-        val btnPenitipan: Button? = root.findViewById(R.id.buttonPenitipan)
-        val btnHealth: Button? = root.findViewById(R.id.buttonhealth)
+        val tvfood: TextView? = root.findViewById(R.id.tv_food)
+        val tvaccessories: TextView? = root.findViewById(R.id.tv_accessories)
+        val tvgrooming: TextView? = root.findViewById(R.id.tv_grooming)
+        val tvdaycare: TextView? = root.findViewById(R.id.tv_day_care)
+        val tvhealthcare: TextView? = root.findViewById(R.id.tv_health_care)
 //        textView.text = "This is home Fragment"
-        btnMakanan?.setOnClickListener(this)
-        btnAksesoris?.setOnClickListener(this)
-        btnGrooming?.setOnClickListener(this)
-        btnPenitipan?.setOnClickListener(this)
-        btnHealth?.setOnClickListener(this)
+        tvfood?.setOnClickListener(this)
+        tvaccessories?.setOnClickListener(this)
+        tvgrooming?.setOnClickListener(this)
+        tvdaycare?.setOnClickListener(this)
+        tvhealthcare?.setOnClickListener(this)
         val tv_Usermain : TextView = root.findViewById(R.id.tv_Usermain)
 
         val sharedPreferences =
@@ -84,7 +83,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
         if (v != null) {
             when (v.id) {
 
-                R.id.buttonMenuMakanan -> {
+                R.id.tv_food -> {
                     var tagMakanan = "Pilih Jenis Hewan"
                     val intent = Intent(activity, PilihJenisHewan::class.java)
                         .apply {
@@ -94,7 +93,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
                     activity?.startActivity(intent)
                 }
 
-                R.id.buttonAksesoris -> {
+                R.id.tv_accessories -> {
 
                     val intent = Intent(activity, AksesorisJenisHewan::class.java)
                         .apply {
@@ -103,7 +102,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
                     activity?.startActivity(intent)
 
                 }
-                R.id.buttonGrooming -> {
+                R.id.tv_grooming -> {
 
                     val intent = Intent(activity, GrJenisHewan::class.java)
                         .apply {
@@ -112,7 +111,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
                     activity?.startActivity(intent)
                 }
 
-                R.id.buttonPenitipan -> {
+                R.id.tv_day_care -> {
 
                     val intent = Intent(activity, PenitipanPilihToko::class.java)
                         .apply {
@@ -120,7 +119,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
                         }
                     activity?.startActivity(intent)
                 }
-                R.id.buttonhealth -> {
+                R.id.tv_health_care -> {
 
                     val intent = Intent(activity, Health_JenisHewan::class.java)
                         .apply {

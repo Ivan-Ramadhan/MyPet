@@ -42,11 +42,11 @@
 
         <TextView
             android:id="@+id/title_dogfoodcategory"
-            android:layout_width="285dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/title_background"
             android:fontFamily="@font/poppins_semibold"
@@ -64,10 +64,10 @@
 
         <LinearLayout
             android:id="@+id/ll_dryfood"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/card_category_background"
+            android:layout_width="330dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bgshadow6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.503"
             android:paddingStart="@dimen/cart_item_paddingStartEnd"
@@ -78,6 +78,8 @@
             app:layout_constraintTop_toBottomOf="@id/title_dogfoodcategory">
             <LinearLayout
                 android:id="@+id/ll_cart_item_image_dryfood"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
@@ -87,8 +89,10 @@
                     android:id="@+id/iv_cart_item_image_dryfood"
                     android:layout_width="@dimen/cart_item_image_width"
                     android:layout_height="@dimen/cart_item_image_height"
+                    android:layout_gravity="center|left"
                     android:background="@color/colorImageViewBackground"
                     android:contentDescription="@string/content_description"
+                    android:foregroundGravity="center_vertical"
                     android:scaleType="fitXY"
                     android:src="@drawable/dogdryfood" />
             </LinearLayout>
@@ -111,10 +115,10 @@
 
         <LinearLayout
             android:id="@+id/ll_wetfood"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/card_category_background"
+            android:layout_width="330dp"
+            android:layout_height="120dp"
+
+            android:background="@drawable/bgshadow6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.503"
             android:paddingStart="@dimen/cart_item_paddingStartEnd"
@@ -127,7 +131,8 @@
                 android:id="@+id/ll_cart_item_image_wetfood"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
                 android:padding="@dimen/category_item_image_padding">
 
                 <ImageView
@@ -158,10 +163,10 @@
 
         <LinearLayout
             android:id="@+id/ll_snackfood"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/card_category_background"
+            android:layout_width="330dp"
+            android:layout_height="120dp"
+
+            android:background="@drawable/bgshadow6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.503"
             android:paddingStart="@dimen/cart_item_paddingStartEnd"
@@ -174,6 +179,8 @@
                 android:id="@+id/ll_cart_item_image_snackfood"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
                 android:padding="@dimen/category_item_image_padding">
 
                 <ImageView
