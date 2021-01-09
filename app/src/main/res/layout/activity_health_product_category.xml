@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.HealthProductCategoryActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_cat_health_category"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/app_gradient_color_background"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingStart="@dimen/toolbar_title_paddingStart"
+            android:paddingEnd="0dp"
+            android:text=""
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/toolbar_title_text_size"
+            android:textStyle="bold"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ImageView
+        android:id="@+id/imagebar_cat_health_category"
+        android:layout_width="423dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_cat_health_category"
+        app:srcCompat="@drawable/grouphewan" />
+
+    <TextView
+        android:id="@+id/title_cathealthcategory"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/title_background"
+        android:fontFamily="@font/poppins_semibold"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:paddingTop="@dimen/title_padding"
+        android:paddingBottom="@dimen/title_padding"
+        android:text="@string/lbl_cat_health_category"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/btn_textSize"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagebar_cat_health_category" />
+
+    <LinearLayout
+        android:id="@+id/ll_cat_vitamins"
+        android:layout_width="330dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bgshadow6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        android:paddingStart="@dimen/cart_item_paddingStartEnd"
+        android:paddingTop="@dimen/cart_item_paddingTopBottom"
+        android:paddingEnd="@dimen/cart_item_paddingStartEnd"
+        android:paddingBottom="@dimen/cart_item_paddingTopBottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_cathealthcategory">
+        <LinearLayout
+            android:id="@+id/ll_cart_item_image_vitamins"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:padding="@dimen/category_item_image_padding">
+
+            <ImageView
+                android:id="@+id/iv_cart_item_image_vitamins"
+                android:layout_width="@dimen/cart_item_image_width"
+                android:layout_height="@dimen/cart_item_image_height"
+                android:layout_gravity="center|left"
+                android:background="@color/colorWhite"
+                android:contentDescription="@string/content_description"
+                android:foregroundGravity="center_vertical"
+                android:scaleType="fitXY"
+                android:src="@drawable/cat_vitamins" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_cat_dry_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/lbl_cat_heatlh_category_vitamin"
+            android:textColor="@color/colorPurpleDark"
+            android:textSize="@dimen/category_textSize"
+            android:textStyle="bold"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cat_suplements"
+        android:layout_width="330dp"
+        android:layout_height="120dp"
+
+        android:background="@drawable/bgshadow6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        android:paddingStart="@dimen/cart_item_paddingStartEnd"
+        android:paddingTop="@dimen/cart_item_paddingTopBottom"
+        android:paddingEnd="@dimen/cart_item_paddingStartEnd"
+        android:paddingBottom="@dimen/cart_item_paddingTopBottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_cat_vitamins">
+        <LinearLayout
+            android:id="@+id/ll_cart_item_image_suplements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            android:padding="@dimen/category_item_image_padding">
+
+            <ImageView
+                android:id="@+id/iv_cart_item_image_suplements"
+                android:layout_width="@dimen/cart_item_image_width"
+                android:layout_height="@dimen/cart_item_image_height"
+                android:background="@color/colorWhite"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitXY"
+                android:src="@drawable/cat_suplements"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_cat_wet_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/lbl_cat_health_category_suplements"
+            android:textColor="@color/colorPurpleDark"
+            android:textSize="@dimen/category_textSize"
+            android:textStyle="bold"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cat_medicine"
+        android:layout_width="330dp"
+        android:layout_height="120dp"
+
+        android:background="@drawable/bgshadow6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        android:paddingStart="@dimen/cart_item_paddingStartEnd"
+        android:paddingTop="@dimen/cart_item_paddingTopBottom"
+        android:paddingEnd="@dimen/cart_item_paddingStartEnd"
+        android:paddingBottom="@dimen/cart_item_paddingTopBottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_cat_suplements">
+        <LinearLayout
+            android:id="@+id/ll_cart_item_image_medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            android:padding="@dimen/category_item_image_padding">
+
+            <ImageView
+                android:id="@+id/iv_cart_item_image_medicine"
+                android:layout_width="@dimen/cart_item_image_width"
+                android:layout_height="@dimen/cart_item_image_height"
+                android:background="@color/colorWhite"
+
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitXY"
+                android:src="@drawable/cat_medicine"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_cat_medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/lbl_cat_health_category_medicine"
+            android:textColor="@color/colorPurpleDark"
+            android:textSize="@dimen/category_textSize"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"></TextView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

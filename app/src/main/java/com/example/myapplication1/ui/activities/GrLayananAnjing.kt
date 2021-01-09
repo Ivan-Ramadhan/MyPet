@@ -1,11 +1,10 @@
 package com.example.myapplication1.ui.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication1.R
-import kotlinx.android.synthetic.main.activity_gr_daftar_pelayanan.*
-import kotlinx.android.synthetic.main.activity_gr_daftar_pelayanan.btn_gr_cat_haircut
+import com.example.myapplication1.utils.Constants
 import kotlinx.android.synthetic.main.activity_gr_layanan_anjing.*
 
 class GrLayananAnjing : AppCompatActivity() {
@@ -13,32 +12,40 @@ class GrLayananAnjing : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gr_layanan_anjing)
 
-        buttonCukurAnjing.setOnClickListener {
+        btn_gr_dog_haircut.setOnClickListener {
 
-            val pindah = Intent(this@GrLayananAnjing, GrKeranjang::class.java)
+            val intent = Intent(this@GrLayananAnjing, CatWetFoodActivity::class.java)
                 .apply {
-
+                    putExtra(Constants.PRODUCT_CATEGORY, Constants.CAT_HAIR_CUT)
+                    putExtra(Constants.PET, intent.getStringExtra(Constants.PET))
+                    putExtra(Constants.PRODUCT_TYPE, intent.getStringExtra(Constants.PRODUCT_TYPE))
                 }
 
-            startActivity(pindah)
+            startActivity(intent)
         }
-        buttonPotongKukuAnjing.setOnClickListener {
 
-            val pindah = Intent(this@GrLayananAnjing, GrKeranjang::class.java)
+        btn_gr_dog_nailcut.setOnClickListener {
+
+            val intent = Intent(this@GrLayananAnjing, CatWetFoodActivity::class.java)
                 .apply {
-
+                    putExtra(Constants.PRODUCT_CATEGORY, Constants.CAT_NAIL_CUT)
+                    putExtra(Constants.PET, intent.getStringExtra(Constants.PET))
+                    putExtra(Constants.PRODUCT_TYPE, intent.getStringExtra(Constants.PRODUCT_TYPE))
                 }
 
-            startActivity(pindah)
+            startActivity(intent)
         }
-        buttonPerawatanAnjing.setOnClickListener {
 
-            val pindah = Intent(this@GrLayananAnjing, GrKeranjang::class.java)
+        btn_gr_dog_hairtreatment.setOnClickListener {
+
+            val intent = Intent(this@GrLayananAnjing, CatWetFoodActivity::class.java)
                 .apply {
-
+                    putExtra(Constants.PRODUCT_CATEGORY, Constants.CAT_HAIR_TREATMENT)
+                    putExtra(Constants.PET, intent.getStringExtra(Constants.PET))
+                    putExtra(Constants.PRODUCT_TYPE, intent.getStringExtra(Constants.PRODUCT_TYPE))
                 }
 
-            startActivity(pindah)
+            startActivity(intent)
         }
     }
 }

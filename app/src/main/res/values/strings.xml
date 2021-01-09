@@ -209,5 +209,13 @@
     <string name="lbl_food_pet">Choose Your Pet</string>
     <string name="lbl_cat">Cat</string>
     <string name="lbl_dog">Dog</string>
+    <string name="lbl_cat_health_category">Choose Healt Care Category</string>
+    <string name="lbl_dog_heatlh_category_vitamin">Vitamins</string>
+    <string name="lbl_cat_health_category_suplements">Suplements</string>
+    <string name="lbl_cat_health_category_medicine">Medicine</string>
+    <string name="lbl_dog_health_category">Choose Health Care Category</string>
+    <string name="lbl_dog_health_category_suplements">Suplements</string>
+    <string name="lbl_dog_health_category_medicine">Medicine</string>
+    <string name="lbl_cat_heatlh_category_vitamin">Vitamins</string>
 
 </resources>

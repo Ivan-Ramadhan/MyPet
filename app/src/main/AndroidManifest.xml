@@ -11,12 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activities.GrLayananAnjing"></activity>
+        <activity android:name=".ui.activities.HealthDogProductCategoryActivity"></activity>
+        <activity android:name=".ui.activities.HealthProductCategoryActivity" />
+        <activity android:name=".ui.activities.GrLayananAnjing" />
         <activity
             android:name=".ui.activities.Food_DogFoodCategoryActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.activities.SoldProductDetailsActivity"
             android:screenOrientation="portrait"
@@ -139,18 +140,15 @@
         <activity
             android:name=".ui.activities.AksesorisJenisBarang"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.activities.AksesorisJenisBarangAnjing"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.activities.AksesorisJenisHewan"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ui.activities.Aksesoriskeranjang" />
         <activity android:name=".ui.activities.AksesorisListBarang" />
         <activity android:name=".ui.activities.Aksesorisbajuanjing" />

@@ -105,7 +105,7 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
                     listCategory = arrayOf("Choose Product Category...","Dog Clothes","Dog Neck Belt","Dog Hat","Dog Glasses","Dog Shoes")
                 }
 
-                // FOOD
+                // Grooming
                 else if(listType.get(position).equals("Grooming") && rb_cat.isChecked)
                 {
                     listCategory = arrayOf("Choose Product Category...","Cat Hair Cut","Cat Nail Cut","Cat Hair Treatment")
@@ -114,6 +114,19 @@ class AddProductActivity : BaseActivity(), View.OnClickListener {
                 {
                     listCategory = arrayOf("Choose Product Category...","Dog Hair Cut","Dog Nail Cut","Dog Hair Treatment")
                 }
+
+                // Medicine
+                else if(listType.get(position).equals("Health Care") && rb_cat.isChecked)
+                {
+                    listCategory = arrayOf("Choose Product Category...","Cat Vitamins","Cat Suplements","Cat Medicine")
+                }
+                else if(listType.get(position).equals("Health Care") && rb_dog.isChecked)
+                {
+                    listCategory = arrayOf("Choose Product Category...","Dog Vitamins","Dog Suplements","Dog Medicine")
+                }
+
+
+
                 mProductType = listType.get(position).trim { it <= ' ' }
                 spinnerProductCategory(listCategory)
 
